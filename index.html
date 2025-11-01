@@ -120,13 +120,7 @@
           <div style="font-size:12px; font-weight:700; opacity:.9">Tema</div>
           <div id="themeSwitch" class="switch" role="button" tabindex="0"><div class="knob"></div></div>
         </div>
-
-        <div style="display:flex; gap:8px; align-items:center;">
-          <button id="saveBtn" class="btn save small" title="Guardar archivo">💾 Guardar</button>
-          <button id="loadBtn" class="btn load small" title="Cargar archivo">📂 Cargar</button>
-          <input id="fileInput" type="file" accept=".json,application/json" style="display:none">
         </div>
-      </div>
     </div>
 
     <div class="controls-row">
@@ -150,7 +144,6 @@
 
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button id="applyBtn" class="btn add">Agregar / Guardar</button>
-        <button id="saveLocalBtn" class="btn gray small">Guardar en Atlas (localStorage)</button>
         <button id="clearForm" class="btn small">Limpiar</button>
       </div>
     </div>
@@ -158,13 +151,13 @@
 
   <script>
     // --- estado y referencias ---
-    let data = JSON.parse(localStorage.getItem('albionData')) || [];
+    let data = []; // Inicializamos data vacía, se cargará desde JSON
     let editingMap = null; // si editando, contiene el nombre original
     const resultTableBody = document.getElementById('resultTableBody');
     const searchInput = document.getElementById('searchInput');
-    const saveBtn = document.getElementById('saveBtn');
-    const loadBtn = document.getElementById('loadBtn');
-    const fileInput = document.getElementById('fileInput');
+    // const saveBtn = document.getElementById('saveBtn'); // Eliminado
+    // const loadBtn = document.getElementById('loadBtn'); // Eliminado
+    // const fileInput = document.getElementById('fileInput'); // Eliminado
     const themeSwitch = document.getElementById('themeSwitch');
     const bodyEl = document.body;
 
@@ -172,7 +165,7 @@
     const guildListContainer = document.getElementById('guildListContainer');
     const addGuildRowBtn = document.getElementById('addGuildRow');
     const applyBtn = document.getElementById('applyBtn');
-    const saveLocalBtn = document.getElementById('saveLocalBtn');
+    // const saveLocalBtn = document.getElementById('saveLocalBtn'); // Eliminado
     const clearFormBtn = document.getElementById('clearForm');
 
     // --- helpers para filas de gremio en form ---
@@ -212,7 +205,7 @@
     addGuildRowBtn.addEventListener('click', (e) => { e.preventDefault(); guildListContainer.appendChild(createGuildFormRow('', 'HO')); });
     clearFormBtn.addEventListener('click', () => { editingMap = null; mapInput.value = ''; clearGuildForm(); });
 
-    // --- normalizar datos importados: convertir guild string -> {name,type} ---
+    // --- normalizar datos: convertir guild string -> {name,type} (Mantenido para compatibilidad si la fuente JSON varía) ---
     function normalizeData() {
       data = (data || []).map(item => {
         if (!item || typeof item !== 'object') return null;
@@ -298,9 +291,9 @@
           }).then(res => {
             if (res.isConfirmed) {
               data = data.filter(d => d.map !== item.map);
-              persist();
+              // NOTA: No hay persistencia aquí, el cambio solo es local en la sesión
               renderResults(searchInput.value);
-              Swal.fire('Eliminado', 'Mapa eliminado correctamente', 'success');
+              Swal.fire('Eliminado', 'Mapa eliminado correctamente (solo en esta sesión)', 'success');
             }
           });
         };
@@ -358,88 +351,49 @@
         data[idx].map = mapName;
         data[idx].guilds = rows;
         data[idx].lastEdited = now;
-        Swal.fire('Actualizado', 'Mapa actualizado correctamente', 'success');
+        Swal.fire('Actualizado', 'Mapa actualizado correctamente (solo en esta sesión)', 'success');
       } else {
         data.push({ map: mapName, guilds: rows, lastEdited: now });
-        Swal.fire('Agregado', 'Mapa agregado al Radar', 'success');
+        Swal.fire('Agregado', 'Mapa agregado al Atlas (solo en esta sesión)', 'success');
       }
 
       editingMap = null;
-      persist();
+      // NOTA: No hay persistencia aquí. Los datos se pierden al recargar.
       renderResults(searchInput.value);
       mapInput.value = '';
       clearGuildForm();
     });
 
-    // --- persistencia local + export/import ---
-    function persist() { localStorage.setItem('albionData', JSON.stringify(data)); }
-
-    saveLocalBtn.addEventListener('click', () => {
-      persist();
-      Swal.fire('Guardado', 'Datos guardados en localStorage', 'success');
-    });
-
-    saveBtn.addEventListener('click', () => {
-      try {
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `radar_albion_${new Date().toISOString().split('T')[0]}.json`;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(url);
-        Swal.fire('✅ Archivo guardado', 'Descarga iniciada', 'success');
-      } catch (err) {
-        console.error(err);
-        Swal.fire('Error', 'No se pudo generar el archivo', 'error');
-      }
-    });
-
-    loadBtn.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', (e) => {
-      const f = e.target.files[0];
-      if (!f) return;
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        try {
-          let text = ev.target.result;
-          if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
-          text = text.trim();
-          const parsed = JSON.parse(text);
-          if (!Array.isArray(parsed)) throw new Error('Se esperaba un array');
-          data = parsed;
-          normalizeAndSaveAfterImport();
-          Swal.fire('✅ Cargado', 'Datos importados correctamente', 'success');
-        } catch (err) {
-          console.error('Error parseando JSON:', err);
-          // intento de limpieza: quitar comas finales
-          try {
-            const cleaned = ev.target.result.replace(/,\s*([\]}])/g, '$1');
-            const parsed2 = JSON.parse(cleaned);
-            data = parsed2;
-            normalizeAndSaveAfterImport();
-            Swal.fire('✅ Cargado (limpio)', 'JSON importado tras limpieza', 'success');
-          } catch (err2) {
-            console.error('Limpieza fallida:', err2);
-            Swal.fire('❌ Error', 'No se pudo leer el archivo JSON o el formato es incorrecto', 'error');
+    // --- Carga inicial de datos desde un archivo JSON (asumiendo que está en el mismo servidor/Netlify) ---
+    // NOTA: El archivo debe llamarse 'albionData.json' o ajustar la URL.
+    function loadInitialData() {
+      fetch('./albionData.json') // Intenta cargar el archivo desde la raíz
+        .then(response => {
+          if (!response.ok) {
+            // Si hay un error, por ejemplo, 404, mostramos un mensaje
+            throw new Error(`Error al cargar albionData.json: ${response.statusText}`);
           }
-        } finally {
-          fileInput.value = '';
-        }
-      };
-      reader.onerror = () => { Swal.fire('❌ Error', 'No se pudo leer el archivo', 'error'); fileInput.value = ''; };
-      reader.readAsText(f, 'UTF-8');
-    });
-
-    function normalizeAndSaveAfterImport() {
-      normalizeData();
-      persist();
-      renderResults();
-      // if form empty, init one row
-      if (!guildListContainer.children.length) clearGuildForm();
+          return response.json();
+        })
+        .then(parsedData => {
+          if (!Array.isArray(parsedData)) {
+            throw new Error('El archivo JSON no es un array válido.');
+          }
+          data = parsedData;
+          normalizeData();
+          renderResults();
+          clearGuildForm();
+          console.log('Datos cargados desde albionData.json.');
+        })
+        .catch(error => {
+          console.error('Error durante la carga inicial de datos:', error);
+          Swal.fire('Error de Carga', 'No se pudieron obtener los datos de Albion. Verifica la URL del archivo JSON.', 'error');
+          // Si falla, al menos inicializamos la tabla vacía y el formulario
+          renderResults();
+          clearGuildForm();
+        });
     }
+
 
     // --- busqueda ---
     searchInput.addEventListener('input', (e) => renderResults(e.target.value));
@@ -449,7 +403,7 @@
       const light = theme === 'light';
       bodyEl.classList.toggle('light', light);
       themeSwitch.classList.toggle('on', light);
-      localStorage.setItem('theme', theme);
+      localStorage.setItem('theme', theme); // Mantenemos el tema en localStorage
     }
     themeSwitch.addEventListener('click', () => {
       const newT = bodyEl.classList.contains('light') ? 'dark' : 'light';
@@ -459,15 +413,7 @@
     applyTheme(localStorage.getItem('theme') || 'dark');
 
     // --- inicializacion ---
-    normalizeData();
-    renderResults();
-    clearGuildForm();
-
-    // inicial: si localStorage vacío y quieres cargar ejemplo descomenta loadExample()
-    // loadExample();
-
-    // seguridad: escape HTML cuando renderices nombres (ya usamos textContent in form)
-    // no más funciones aquí
+    loadInitialData(); // ¡Cargamos los datos al inicio!
 
     // --- util: escape HTML (si necesitaras insertar HTML) ---
     function escapeHtml(s) {
