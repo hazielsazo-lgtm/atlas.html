@@ -120,13 +120,7 @@
           <div style="font-size:12px; font-weight:700; opacity:.9">Tema</div>
           <div id="themeSwitch" class="switch" role="button" tabindex="0"><div class="knob"></div></div>
         </div>
-
-        <div style="display:flex; gap:8px; align-items:center;">
-          <button id="saveBtn" class="btn save small" title="Guardar archivo">💾 Guardar</button>
-          <button id="loadBtn" class="btn load small" title="Cargar archivo">📂 Cargar</button>
-          <input id="fileInput" type="file" accept=".json,application/json" style="display:none">
         </div>
-      </div>
     </div>
 
     <div class="controls-row">
@@ -150,7 +144,6 @@
 
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button id="applyBtn" class="btn add">Agregar / Guardar</button>
-        <button id="saveLocalBtn" class="btn gray small">Guardar en Radar (localStorage)</button>
         <button id="clearForm" class="btn small">Limpiar</button>
       </div>
     </div>
@@ -162,9 +155,9 @@
     let editingMap = null; // si editando, contiene el nombre original
     const resultTableBody = document.getElementById('resultTableBody');
     const searchInput = document.getElementById('searchInput');
-    const saveBtn = document.getElementById('saveBtn');
-    const loadBtn = document.getElementById('loadBtn');
-    const fileInput = document.getElementById('fileInput');
+    // const saveBtn = document.getElementById('saveBtn'); // Eliminado
+    // const loadBtn = document.getElementById('loadBtn'); // Eliminado
+    // const fileInput = document.getElementById('fileInput'); // Eliminado
     const themeSwitch = document.getElementById('themeSwitch');
     const bodyEl = document.body;
 
@@ -172,7 +165,7 @@
     const guildListContainer = document.getElementById('guildListContainer');
     const addGuildRowBtn = document.getElementById('addGuildRow');
     const applyBtn = document.getElementById('applyBtn');
-    const saveLocalBtn = document.getElementById('saveLocalBtn');
+    // const saveLocalBtn = document.getElementById('saveLocalBtn'); // Eliminado
     const clearFormBtn = document.getElementById('clearForm');
 
     // --- helpers para filas de gremio en form ---
@@ -371,75 +364,11 @@
       clearGuildForm();
     });
 
-    // --- persistencia local + export/import ---
+    // --- persistencia local (AUTOMATICA en agregar/editar/eliminar) ---
     function persist() { localStorage.setItem('albionData', JSON.stringify(data)); }
 
-    saveLocalBtn.addEventListener('click', () => {
-      persist();
-      Swal.fire('Guardado', 'Datos guardados en localStorage', 'success');
-    });
-
-    saveBtn.addEventListener('click', () => {
-      try {
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `radar_albion_${new Date().toISOString().split('T')[0]}.json`;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(url);
-        Swal.fire('✅ Archivo guardado', 'Descarga iniciada', 'success');
-      } catch (err) {
-        console.error(err);
-        Swal.fire('Error', 'No se pudo generar el archivo', 'error');
-      }
-    });
-
-    loadBtn.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', (e) => {
-      const f = e.target.files[0];
-      if (!f) return;
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        try {
-          let text = ev.target.result;
-          if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
-          text = text.trim();
-          const parsed = JSON.parse(text);
-          if (!Array.isArray(parsed)) throw new Error('Se esperaba un array');
-          data = parsed;
-          normalizeAndSaveAfterImport();
-          Swal.fire('✅ Cargado', 'Datos importados correctamente', 'success');
-        } catch (err) {
-          console.error('Error parseando JSON:', err);
-          // intento de limpieza: quitar comas finales
-          try {
-            const cleaned = ev.target.result.replace(/,\s*([\]}])/g, '$1');
-            const parsed2 = JSON.parse(cleaned);
-            data = parsed2;
-            normalizeAndSaveAfterImport();
-            Swal.fire('✅ Cargado (limpio)', 'JSON importado tras limpieza', 'success');
-          } catch (err2) {
-            console.error('Limpieza fallida:', err2);
-            Swal.fire('❌ Error', 'No se pudo leer el archivo JSON o el formato es incorrecto', 'error');
-          }
-        } finally {
-          fileInput.value = '';
-        }
-      };
-      reader.onerror = () => { Swal.fire('❌ Error', 'No se pudo leer el archivo', 'error'); fileInput.value = ''; };
-      reader.readAsText(f, 'UTF-8');
-    });
-
-    function normalizeAndSaveAfterImport() {
-      normalizeData();
-      persist();
-      renderResults();
-      // if form empty, init one row
-      if (!guildListContainer.children.length) clearGuildForm();
-    }
+    // El código para los botones de Guardar/Cargar archivo y el botón de Guardar en localStorage
+    // ha sido eliminado por petición del usuario.
 
     // --- busqueda ---
     searchInput.addEventListener('input', (e) => renderResults(e.target.value));
