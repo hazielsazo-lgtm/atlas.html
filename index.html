@@ -150,7 +150,7 @@
 
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <button id="applyBtn" class="btn add">Agregar / Guardar</button>
-        <button id="saveLocalBtn" class="btn gray small">Guardar en ATLAS (localStorage)</button>
+        <button id="saveLocalBtn" class="btn gray small">Guardar en Atlas (localStorage)</button>
         <button id="clearForm" class="btn small">Limpiar</button>
       </div>
     </div>
@@ -361,7 +361,7 @@
         Swal.fire('Actualizado', 'Mapa actualizado correctamente', 'success');
       } else {
         data.push({ map: mapName, guilds: rows, lastEdited: now });
-        Swal.fire('Agregado', 'Mapa agregado al ATLAS', 'success');
+        Swal.fire('Agregado', 'Mapa agregado al Radar', 'success');
       }
 
       editingMap = null;
@@ -385,7 +385,7 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `atlas_albion_${new Date().toISOString().split('T')[0]}.json`;
+        a.download = `radar_albion_${new Date().toISOString().split('T')[0]}.json`;
         document.body.appendChild(a);
         a.click();
         a.remove();
