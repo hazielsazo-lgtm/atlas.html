@@ -4,85 +4,124 @@
   <meta charset="utf-8" />
   <title>ATLAS - Albion Online</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="ATLAS - Radar de gremios para Albion Online (compartido vía Firebase)">
+  <meta name="description" content="ATLAS - Mapas y gremios compartidos (Firestore)" />
 
-  <!-- Favicon: SVG brújula/atlas embebido -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='35%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23f6e5b3'/%3E%3Cstop offset='100%25' stop-color='%23c29b2d'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='18' fill='%23362f22'/%3E%3Ccircle cx='50' cy='45' r='28' fill='url(%23g)' stroke='%23704d1b' stroke-width='3'/%3E%3Cpath d='M50 20 L58 52 L50 48 L42 52 Z' fill='%23312b22' transform='rotate(18 50 45)'/%3E%3Ccircle cx='50' cy='45' r='6' fill='%231b1208'/%3E%3C/svg%3E" type="image/svg+xml">
+  <!-- Favicon: brújula embebida -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='14' width='100' height='100' fill='%23362f22'/%3E%3Ccircle cx='50' cy='45' r='28' fill='%23f6e5b3' stroke='%23704d1b' stroke-width='3'/%3E%3Cpath d='M50 22 L58 54 L50 50 L42 54 Z' fill='%23312b22' transform='rotate(18 50 45)'/%3E%3Ccircle cx='50' cy='45' r='6' fill='%231b1208'/%3E%3C/svg%3E" type="image/svg+xml">
 
   <style>
-    /* --- tipografía y paleta --- */
     @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;600;700&display=swap');
-
     :root{
-      --bg:#0b0b0b;
-      --panel:#0f1115;
-      --accent:#caa42b;
-      --muted: rgba(255,255,255,0.6);
-      --card:#16171b;
-      --success:#2bb673;
-      --danger:#e74c3c;
+      --bg:#070707; --panel:#0e0f12; --card:#121317;
+      --accent:#caa42b; --muted: rgba(255,255,255,0.68);
+      --danger:#e74c3c; --success:#2bb673;
     }
-
-    html,body{height:100%;margin:0;padding:0;background:linear-gradient(180deg,#050505,var(--bg));color:#efe8d8;font-family:"Spectral",serif}
-    .wrap{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:28px;box-sizing:border-box;}
-    .app{width:100%;max-width:1040px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px;padding:18px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.02) }
-
-    header{display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:#2f2418;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,0.6)}
-    .logo svg{width:42px;height:42px}
-    h1{margin:0;font-size:20px;letter-spacing:1px;background:linear-gradient(90deg,var(--accent),#f0d38a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .sub{font-size:12px;color:var(--muted);margin-top:2px}
-
-    /* controles */
-    .controls{display:flex;gap:8px;align-items:center}
-    .btn{background:linear-gradient(90deg,#b88f20,#d4b03a);border:none;padding:10px 12px;border-radius:8px;color:#111;font-weight:700;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,0.45)}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);font-weight:600}
-    .btn.danger{background:linear-gradient(90deg,#d64b3a,#b83a2a);color:#fff}
-
-    /* layout */
-    main{display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:18px}
-    @media(max-width:980px){ main{grid-template-columns:1fr} }
-
-    /* panel principal */
-    .panel{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-    .searchRow{display:flex;gap:8px;align-items:center;margin-bottom:12px}
-    .searchRow input{flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;font-size:14px}
-
-    /* lista de mapas */
-    .list{display:grid;gap:12px;max-height:68vh;overflow:auto;padding-right:6px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;gap:8px}
-    .card h3{margin:0;font-size:16px}
-    .meta{font-size:12px;color:var(--muted)}
-    .guilds{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-    .chip{padding:6px 8px;border-radius:999px;font-weight:600;font-size:13px;background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.02)}
-
-    .cardActions{display:flex;gap:8px;margin-top:8px}
-    .small{padding:8px 10px;border-radius:8px;font-weight:700;cursor:pointer}
-
-    /* panel lateral (form) */
-    aside .panel{position:sticky;top:20px}
-    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
-    input[type="text"], textarea, select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;font-size:14px;box-sizing:border-box}
-    .guildRow{display:flex;gap:8px;align-items:center;margin-bottom:8px}
-    .guildRow input{flex:1}
-    .flex{display:flex;gap:8px}
-    .muted{font-size:13px;color:var(--muted)}
-    footer{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
-
-    /* scrollbar simple */
-    .list::-webkit-scrollbar{width:8px}
-    .list::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.04);border-radius:8px}
+    html,body{
+      height:100%; margin:0; padding:0;
+      background:linear-gradient(180deg,#030303,var(--bg));
+      color:#efe8d8; font-family:"Spectral",serif;
+    }
+    .wrap{
+      min-height:100vh; display:flex; align-items:flex-start;
+      justify-content:center; padding:28px; box-sizing:border-box;
+    }
+    .app{
+      width:100%; max-width:1100px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px; padding:18px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    header{
+      display:flex; align-items:center; gap:14px;
+      justify-content:space-between; flex-wrap:wrap;
+    }
+    .brand{display:flex; align-items:center; gap:12px;}
+    .logo{
+      width:56px; height:56px; border-radius:12px;
+      background:#2f2418; display:flex; align-items:center;
+      justify-content:center; box-shadow:0 6px 16px rgba(0,0,0,0.6);
+    }
+    .logo svg{width:44px; height:44px;}
+    h1{
+      margin:0; font-size:20px; letter-spacing:1px;
+      background:linear-gradient(90deg,var(--accent),#f0d38a);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .sub{font-size:12px; color:var(--muted); margin-top:2px;}
+    .controls{display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+    .btn{
+      background:linear-gradient(90deg,#b88f20,#d4b03a);
+      border:none; padding:10px 12px; border-radius:8px;
+      color:#111; font-weight:700; cursor:pointer;
+      box-shadow:0 6px 16px rgba(0,0,0,0.35);
+    }
+    .btn.ghost{
+      background:transparent; border:1px solid rgba(255,255,255,0.04);
+      color:var(--muted); font-weight:600;
+    }
+    .btn.danger{background:linear-gradient(90deg,#d64b3a,#b83a2a); color:#fff;}
+    .small{padding:8px 10px; font-size:13px;}
+    main{
+      display:grid; grid-template-columns:1fr 380px;
+      gap:18px; margin-top:18px;
+    }
+    @media(max-width:980px){ main{grid-template-columns:1fr;} }
+    .panel{
+      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
+      padding:14px; border-radius:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .searchRow{
+      display:flex; gap:8px; align-items:center; margin-bottom:12px;
+    }
+    .searchRow input{
+      flex:1; padding:12px; border-radius:8px;
+      border:1px solid rgba(255,255,255,0.03);
+      background:transparent; color:inherit; font-size:14px;
+    }
+    .list{
+      display:grid; gap:12px; max-height:70vh;
+      overflow:auto; padding-right:6px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      padding:12px; border-radius:8px;
+      border:1px solid rgba(255,255,255,0.02);
+      display:flex; flex-direction:column; gap:8px;
+    }
+    .card h3{margin:0; font-size:16px;}
+    .meta{font-size:12px; color:var(--muted);}
+    .guilds{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;}
+    .chip{
+      padding:6px 8px; border-radius:999px; font-weight:600;
+      font-size:13px; background:rgba(0,0,0,0.25);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .cardActions{display:flex; gap:8px; margin-top:8px; flex-wrap:wrap;}
+    .muted{font-size:13px; color:var(--muted);}
+    label{display:block; font-size:13px; margin-bottom:6px; color:var(--muted);}
+    .modal-back{
+      position:fixed; inset:0; background:rgba(0,0,0,0.6);
+      display:none; align-items:center; justify-content:center; z-index:50;
+    }
+    .modal{
+      background:var(--panel); padding:16px; border-radius:10px;
+      max-width:720px; width:94%;
+      box-shadow:0 10px 40px rgba(0,0,0,0.7);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    footer{text-align:center; margin-top:12px; font-size:12px; color:var(--muted);}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="app" role="application" aria-label="ATLAS - Albion Online">
+    <div class="app">
+
       <header>
         <div class="brand">
-          <div class="logo" aria-hidden="true">
-            <!-- simple compass svg -->
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <div class="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
               <rect x="6" y="6" width="88" height="88" rx="12" fill="#2f2418"/>
               <circle cx="50" cy="45" r="26" fill="#f6e5b3" stroke="#704d1b" stroke-width="3"/>
               <path d="M50 22 L58 54 L50 50 L42 54 Z" fill="#312b22" transform="rotate(18 50 45)"/>
@@ -91,15 +130,15 @@
           </div>
           <div>
             <h1>ATLAS - Albion Online</h1>
-            <div class="sub">Radar compartido · Mapas & gremios</div>
+            <div class="sub">Mapas & gremios — lectura pública · edición protegida</div>
           </div>
         </div>
 
         <div class="controls">
-          <button id="btnExport" class="btn ghost" title="Exportar JSON">Exportar JSON</button>
-          <button id="btnImport" class="btn ghost" title="Importar JSON">Importar JSON</button>
+          <button id="btnExport" class="btn ghost small">Exportar JSON</button>
+          <button id="btnImport" class="btn ghost small">Importar JSON</button>
           <input id="fileInput" type="file" accept=".json" style="display:none">
-          <button id="btnAuth" class="btn">Iniciar sesión (clave)</button>
+          <button id="btnAuth" class="btn small">Admin (clave)</button>
         </div>
       </header>
 
@@ -108,343 +147,8 @@
           <div class="panel">
             <div class="searchRow">
               <input id="searchInput" placeholder="Buscar mapa o gremio...">
-              <div style="width:12px"></div>
             </div>
 
-            <div class="list panel" id="mapsList" aria-live="polite">
-              <!-- cards de mapas serán insertadas aquí -->
-            </div>
+            <div class="list panel" id="mapsList" aria-live="polite"></div>
           </div>
-        </section>
-
-        <aside>
-          <div class="panel">
-            <h3>Agregar / Editar mapa</h3>
-            <label for="mapName">Nombre del mapa</label>
-            <input id="mapName" type="text" placeholder="Ej: Sunfang Cliffs">
-
-            <div id="guildsContainer" style="margin-top:10px">
-              <label>Gremios</label>
-              <!-- filas de gremio -->
-            </div>
-
-            <div style="display:flex;gap:8px;margin-top:10px">
-              <button id="addGuildBtn" class="btn ghost small">+ Gremio</button>
-              <button id="saveMapBtn" class="btn small">Guardar</button>
-              <button id="clearBtn" class="btn ghost small">Limpiar</button>
-            </div>
-
-            <div style="margin-top:12px" class="muted">
-              Solo usuarios autenticados con la clave pueden <strong>editar</strong> o <strong>eliminar</strong> mapas.
-            </div>
-          </div>
-        </aside>
-      </main>
-
-      <footer>Hecho con ❤️ · ATLAS</footer>
-    </div>
-  </div>
-
-  <!-- Firebase (módulos) + funciones -->
-  <script type="module">
-    // ----------------- FIREBASE IMPORTS -----------------
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-    import {
-      getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, updateDoc
-    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-
-    // ----------------- TU CONFIG (proporcionada) -----------------
-    const firebaseConfig = {
-      apiKey: "AIzaSyAy56huxeutt4fzmxDXMDSQGNomaIf9vSw",
-      authDomain: "atlas-albion-3f535.firebaseapp.com",
-      projectId: "atlas-albion-3f535",
-      storageBucket: "atlas-albion-3f535.firebasestorage.app",
-      messagingSenderId: "734860667304",
-      appId: "1:734860667304:web:211782caf5da8ccb61959d"
-    };
-
-    // ----------------- INICIALIZAR -----------------
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const mapasRef = collection(db, "mapas");
-
-    // ----------------- ELEMENTOS DOM -----------------
-    const mapsList = document.getElementById('mapsList');
-    const searchInput = document.getElementById('searchInput');
-    const fileInput = document.getElementById('fileInput');
-    const btnExport = document.getElementById('btnExport');
-    const btnImport = document.getElementById('btnImport');
-    const btnAuth = document.getElementById('btnAuth');
-
-    const mapNameInput = document.getElementById('mapName');
-    const guildsContainer = document.getElementById('guildsContainer');
-    const addGuildBtn = document.getElementById('addGuildBtn');
-    const saveMapBtn = document.getElementById('saveMapBtn');
-    const clearBtn = document.getElementById('clearBtn');
-
-    // ----------------- AUTENTICACIÓN SIMPLE (contraseña) -----------------
-    // contraseña que elegiste: "hazielsazo"
-    // la guardamos en el código como un array de códigos (obfuscación ligera)
-    const secretCharCodes = [104,97,122,105,101,108,115,97,122,111]; // hazielsazo
-    function getSecret(){ return String.fromCharCode(...secretCharCodes); }
-
-    // sesión simple: si true, el usuario ha ingresado la contraseña correctamente
-    let isAuthed = sessionStorage.getItem('atlas_authed') === '1';
-
-    function promptAuth(){
-      const attempt = prompt('Introduce la clave de administrador:');
-      if (attempt === null) return; // canceló
-      if (attempt === getSecret()){
-        isAuthed = true;
-        sessionStorage.setItem('atlas_authed','1');
-        alert('Autenticado: puedes editar y eliminar mapas.');
-        renderMaps(currentMaps); // actualizar vista para mostrar controles
-      } else {
-        alert('Clave incorrecta.');
-      }
-    }
-
-    btnAuth.addEventListener('click', () => {
-      if (isAuthed){
-        // permitir cerrar sesión
-        if (confirm('Cerrar sesión de administración?')) {
-          isAuthed = false;
-          sessionStorage.removeItem('atlas_authed');
-          alert('Sesión de administración cerrada.');
-          renderMaps(currentMaps);
-        }
-      } else {
-        promptAuth();
-      }
-    });
-
-    // ----------------- UI - helpers -----------------
-    function createGuildRow(name=''){
-      const row = document.createElement('div');
-      row.className = 'guildRow';
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.placeholder = 'Nombre del gremio';
-      input.value = name;
-      row.appendChild(input);
-      const rem = document.createElement('button');
-      rem.className = 'btn ghost small';
-      rem.textContent = 'X';
-      rem.addEventListener('click', ()=> row.remove());
-      row.appendChild(rem);
-      return row;
-    }
-
-    addGuildBtn.addEventListener('click', ()=> guildsContainer.appendChild(createGuildRow()));
-
-    clearBtn.addEventListener('click', ()=> {
-      mapNameInput.value='';
-      guildsContainer.querySelectorAll('.guildRow').forEach(n=>n.remove());
-      guildsContainer.appendChild(createGuildRow());
-      editingId = null;
-      saveMapBtn.textContent = 'Guardar';
-    });
-
-    // ----------------- FIRESTORE: agregar / actualizar -----------------
-    let editingId = null;
-
-    async function saveMap(){
-      const name = mapNameInput.value.trim();
-      if (!name){ alert('Escribe el nombre del mapa'); return; }
-      const guilds = Array.from(guildsContainer.querySelectorAll('input')).map(i=>i.value.trim()).filter(Boolean).map(n=>({name:n}));
-      if (guilds.length === 0){ alert('Agrega al menos un gremio'); return; }
-
-      if (editingId){
-        if (!isAuthed){ alert('Solo el administrador puede editar mapas. Pulsa "Iniciar sesión (clave)".'); return; }
-        // actualizar
-        const d = doc(db, 'mapas', editingId);
-        await updateDoc(d, { map: name, guilds: guilds, lastEdited: new Date().toLocaleString() });
-        editingId = null;
-        saveMapBtn.textContent = 'Guardar';
-        mapNameInput.value=''; guildsContainer.innerHTML=''; guildsContainer.appendChild(createGuildRow());
-        alert('Mapa actualizado');
-      } else {
-        // crear
-        await addDoc(mapasRef, { map: name, guilds: guilds, lastEdited: new Date().toLocaleString() });
-        mapNameInput.value=''; guildsContainer.innerHTML=''; guildsContainer.appendChild(createGuildRow());
-        alert('Mapa guardado');
-      }
-    }
-
-    saveMapBtn.addEventListener('click', saveMap);
-
-    // ----------------- RENDER MAPS + SEARCH -----------------
-    let currentMaps = []; // cache local
-    function renderMaps(list){
-      currentMaps = list;
-      const q = (searchInput.value || '').toLowerCase().trim();
-      mapsList.innerHTML = '';
-
-      const filtered = list.filter(item => {
-        if (!q) return true;
-        if ((item.map || '').toLowerCase().includes(q)) return true;
-        if (Array.isArray(item.guilds) && item.guilds.some(g => (g.name || '').toLowerCase().includes(q))) return true;
-        return false;
-      });
-
-      if (filtered.length === 0){
-        const empty = document.createElement('div');
-        empty.className = 'muted';
-        empty.textContent = 'No hay mapas que mostrar.';
-        mapsList.appendChild(empty);
-        return;
-      }
-
-      filtered.sort((a,b)=> (a.map||'').localeCompare(b.map||''));
-      filtered.forEach(item => {
-        const c = document.createElement('div');
-        c.className = 'card';
-
-        const title = document.createElement('h3');
-        title.textContent = item.map || '(sin nombre)';
-        c.appendChild(title);
-
-        const meta = document.createElement('div');
-        meta.className = 'meta';
-        meta.textContent = item.lastEdited ? `Última edición: ${item.lastEdited}` : '';
-        c.appendChild(meta);
-
-        if (Array.isArray(item.guilds) && item.guilds.length){
-          const gdiv = document.createElement('div');
-          gdiv.className = 'guilds';
-          item.guilds.forEach(g=>{
-            const span = document.createElement('div');
-            span.className = 'chip';
-            span.textContent = g.name || '';
-            gdiv.appendChild(span);
-          });
-          c.appendChild(gdiv);
-        }
-
-        // acciones: ver, editar (si admin), eliminar (si admin)
-        const actions = document.createElement('div');
-        actions.className = 'cardActions';
-
-        const viewBtn = document.createElement('button');
-        viewBtn.className = 'small btn ghost';
-        viewBtn.textContent = 'Editar (abrir)';
-        viewBtn.addEventListener('click', ()=>{
-          // abrir en panel lateral (si admin requiere autenticación para guardar)
-          mapNameInput.value = item.map || '';
-          guildsContainer.innerHTML = '';
-          if (Array.isArray(item.guilds) && item.guilds.length){
-            item.guilds.forEach(g=> guildsContainer.appendChild(createGuildRow(g.name)));
-          } else {
-            guildsContainer.appendChild(createGuildRow());
-          }
-          editingId = item.id;
-          saveMapBtn.textContent = 'Actualizar mapa';
-          // mostrar aviso si no autentificado
-          if (!isAuthed) {
-            const info = document.createElement('div');
-            info.className = 'muted';
-            info.textContent = 'Nota: para guardar cambios necesitas autenticarte como administrador.';
-            // show for a moment
-            saveMapBtn.parentElement.appendChild(info);
-            setTimeout(()=> info.remove(), 3000);
-          }
-        });
-        actions.appendChild(viewBtn);
-
-        // delete button only visible if authenticated
-        const delBtn = document.createElement('button');
-        delBtn.className = 'small btn danger';
-        delBtn.textContent = 'Eliminar';
-        delBtn.addEventListener('click', async ()=>{
-          if (!isAuthed){ alert('Solo el administrador puede eliminar mapas. Pulsa "Iniciar sesión (clave)".'); return; }
-          if (!confirm(`¿Eliminar mapa "${item.map}"? Esta acción es irreversible.`)) return;
-          try{
-            await deleteDoc(doc(db,'mapas', item.id));
-            alert('Mapa eliminado');
-          }catch(e){
-            console.error(e);
-            alert('Error al eliminar');
-          }
-        });
-        actions.appendChild(delBtn);
-
-        c.appendChild(actions);
-        mapsList.appendChild(c);
-      });
-    }
-
-    // ----------------- FIRESTORE: escucha en tiempo real -----------------
-    onSnapshot(mapasRef, (snapshot) => {
-      const arr = [];
-      snapshot.forEach(d=>{
-        arr.push({ id: d.id, ...d.data() });
-      });
-      renderMaps(arr);
-    }, (err)=>{
-      console.error('Error al escuchar mapas:', err);
-    });
-
-    // ----------------- BUSCADOR -----------------
-    searchInput.addEventListener('input', ()=> renderMaps(currentMaps));
-
-    // ----------------- IMPORT / EXPORT JSON -----------------
-    btnExport.addEventListener('click', async ()=>{
-      // descargar todos los mapas actuales como JSON (obtenemos snapshot once)
-      try{
-        // convertir currentMaps en JSON y descargar
-        const blob = new Blob([JSON.stringify(currentMaps, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url; a.download = `atlas_mapas_${new Date().toISOString().split('T')[0]}.json`;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(url);
-      }catch(e){
-        console.error(e);
-        alert('Error al exportar');
-      }
-    });
-
-    btnImport.addEventListener('click', ()=> fileInput.click());
-    fileInput.addEventListener('change', (ev)=>{
-      const f = ev.target.files[0];
-      if (!f) return;
-      const reader = new FileReader();
-      reader.onload = async (e) => {
-        try{
-          const parsed = JSON.parse(e.target.result);
-          if (!Array.isArray(parsed)) throw new Error('JSON debe ser un array de objetos');
-          // subir cada elemento al Firestore (esto lo hace cualquier persona que importe;
-          // si quieres que solo tú subas, no pulses Import desde un equipo público)
-          for (const item of parsed){
-            const docObj = {
-              map: item.map || '',
-              guilds: Array.isArray(item.guilds) ? item.guilds.map(g => ({ name: g.name || g })) : [],
-              lastEdited: item.lastEdited || new Date().toLocaleString()
-            };
-            await addDoc(mapasRef, docObj);
-          }
-          alert('Importación completada');
-        }catch(err){
-          console.error(err);
-          alert('JSON inválido o error al importar');
-        } finally {
-          fileInput.value = '';
-        }
-      };
-      reader.readAsText(f, 'UTF-8');
-    });
-
-    // ----------------- inicializar UI -----------------
-    // insertar una fila de gremio por defecto en el formulario lateral
-    guildsContainer.appendChild(createGuildRow());
-
-    // si ya autenticado, reflejar en UI
-    if (isAuthed) btnAuth.textContent = 'Cerrar sesión (admin)'; else btnAuth.textContent = 'Iniciar sesión (clave)';
-
-  </script>
-</body>
-</html>
-
-
+...
