@@ -1,0 +1,4928 @@
+[
+  {
+    "map": "Avalanche Incline",
+    "guilds": [
+      {
+        "name": "blacklist bandits",
+        "type": "HO"
+      },
+      {
+        "name": "maga",
+        "type": "HO"
+      },
+      {
+        "name": "mighty frogs",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Avalanche Ravine",
+    "guilds": [
+      {
+        "name": "mandatory",
+        "type": "HO"
+      },
+      {
+        "name": "snapp",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "20-10-2025, 2:16:16 p. m."
+  },
+  {
+    "map": "Battlebrae Flatland",
+    "guilds": [
+      {
+        "name": "free beer",
+        "type": "HO"
+      },
+      {
+        "name": "lotion",
+        "type": "HO"
+      },
+      {
+        "name": "buster call",
+        "type": "HO"
+      },
+      {
+        "name": "polar",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:18:53 p. m."
+  },
+  {
+    "map": "Battlebrae Grassland",
+    "guilds": [
+      {
+        "name": "legendarios",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Battlebrae Lake",
+    "guilds": [
+      {
+        "name": "cassiopea",
+        "type": "HO"
+      },
+      {
+        "name": "epic hobos",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Battlebrae Meadow",
+    "guilds": [
+      {
+        "name": "spet5naz",
+        "type": "HO"
+      },
+      {
+        "name": "destroyers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:20:01 p. m."
+  },
+  {
+    "map": "Battlebrae Peaks",
+    "guilds": [
+      {
+        "name": "pay for it",
+        "type": "HO"
+      },
+      {
+        "name": "platinumempire",
+        "type": "HO"
+      },
+      {
+        "name": "falso positivo",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "25-10-2025, 10:27:01 p. m."
+  },
+  {
+    "map": "Battlebrae Plain",
+    "guilds": [
+      {
+        "name": "ephemerals",
+        "type": "HO"
+      },
+      {
+        "name": "the bacons",
+        "type": "HO"
+      },
+      {
+        "name": "is my static",
+        "type": "HO"
+      },
+      {
+        "name": "cuys in the clap",
+        "type": "HO"
+      },
+      {
+        "name": "contingent",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:21:33 p. m."
+  },
+  {
+    "map": "Bleachskull Desert",
+    "guilds": [
+      {
+        "name": "the baspar",
+        "type": "HO"
+      },
+      {
+        "name": "it s show time",
+        "type": "HO"
+      },
+      {
+        "name": "keybump",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Bleachskull Steppe",
+    "guilds": [
+      {
+        "name": "exilium claw",
+        "type": "HO"
+      },
+      {
+        "name": "primergolpe",
+        "type": "HO"
+      },
+      {
+        "name": "the kingdom of guardians",
+        "type": "HO"
+      },
+      {
+        "name": "arkadia world",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Braemore Lowland",
+    "guilds": [
+      {
+        "name": "blackcloud",
+        "type": "HO"
+      },
+      {
+        "name": "gods son of dragons",
+        "type": "HO"
+      },
+      {
+        "name": "obligatory",
+        "type": "HO"
+      },
+      {
+        "name": "safezone",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Braemore Upland",
+    "guilds": [
+      {
+        "name": "club space",
+        "type": "HO"
+      },
+      {
+        "name": "conflictivos",
+        "type": "HO"
+      },
+      {
+        "name": "spade kingdom",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:24:27 p. m."
+  },
+  {
+    "map": "Brambleshore Hinterlands",
+    "guilds": [
+      {
+        "name": "quinta ordem",
+        "type": "HO"
+      },
+      {
+        "name": "furia nocturna",
+        "type": "HO"
+      },
+      {
+        "name": "furia nocturna 2",
+        "type": "HO"
+      },
+      {
+        "name": "interbank",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Darkbough Snag",
+    "guilds": [
+      {
+        "name": "interdits",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Deadpine Forest",
+    "guilds": [
+      {
+        "name": "tlm",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Deathwisp Bog",
+    "guilds": [
+      {
+        "name": "maga",
+        "type": "HO"
+      },
+      {
+        "name": "violent souls",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Deathwisp Sink",
+    "guilds": [
+      {
+        "name": "nothing",
+        "type": "HO"
+      },
+      {
+        "name": "true gentleman",
+        "type": "HO"
+      },
+      {
+        "name": "king surf",
+        "type": "HO"
+      },
+      {
+        "name": "something",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Deepwood Copse",
+    "guilds": [
+      {
+        "name": "k4fn",
+        "type": "HO"
+      },
+      {
+        "name": "deceit",
+        "type": "HO"
+      },
+      {
+        "name": "myrmidons",
+        "type": "HO"
+      },
+      {
+        "name": "gankers letales",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:29:27 p. m."
+  },
+  {
+    "map": "Deepwood Dell",
+    "guilds": [
+      {
+        "name": "grifinoria",
+        "type": "HO"
+      },
+      {
+        "name": "iflame",
+        "type": "HO"
+      },
+      {
+        "name": "martelo forte",
+        "type": "HO"
+      },
+      {
+        "name": "4lf4",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:31:23 p. m."
+  },
+  {
+    "map": "Deepwood Gorge",
+    "guilds": [
+      {
+        "name": "niebia",
+        "type": "HO"
+      },
+      {
+        "name": "vikingoz",
+        "type": "HO"
+      },
+      {
+        "name": "kr seed",
+        "type": "HO"
+      },
+      {
+        "name": "monkeychapoyt",
+        "type": "HO"
+      },
+      {
+        "name": "zoros",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Deepwood Pines",
+    "guilds": [
+      {
+        "name": "primata mod",
+        "type": "HO"
+      },
+      {
+        "name": "darkness inc",
+        "type": "HO"
+      },
+      {
+        "name": "los chasquis",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Driftwood Glen",
+    "guilds": [
+      {
+        "name": "mandatory",
+        "type": "HO"
+      },
+      {
+        "name": "keepers of the quagmire",
+        "type": "HO"
+      },
+      {
+        "name": "hati",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Driftwood Hollow",
+    "guilds": [
+      {
+        "name": "nothing",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Driftwood Vale",
+    "guilds": [
+      {
+        "name": "usil",
+        "type": "HO"
+      },
+      {
+        "name": "mandatory",
+        "type": "HO"
+      },
+      {
+        "name": "maga",
+        "type": "HO"
+      },
+      {
+        "name": "osdothraki",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:34:01 p. m."
+  },
+  {
+    "map": "Dryvein Confluence",
+    "guilds": [
+      {
+        "name": "the jokers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Dryvein Cross",
+    "guilds": [
+      {
+        "name": "the archimagos",
+        "type": "HO"
+      },
+      {
+        "name": "blades of avalon",
+        "type": "HO"
+      },
+      {
+        "name": "krozakov",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Dryvein End",
+    "guilds": [
+      {
+        "name": "rehab",
+        "type": "HO"
+      },
+      {
+        "name": "death punch",
+        "type": "HO"
+      },
+      {
+        "name": "legendarios",
+        "type": "HO"
+      },
+      {
+        "name": "iberian",
+        "type": "HO"
+      },
+      {
+        "name": "radiant",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:47:50 p. m."
+  },
+  {
+    "map": "Dryvein Oasis",
+    "guilds": [
+      {
+        "name": "brigada balrog",
+        "type": "HO"
+      },
+      {
+        "name": "hidra reborn",
+        "type": "HO"
+      },
+      {
+        "name": "la guardia del joker",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Dryvein Plain",
+    "guilds": [
+      {
+        "name": "loyalty matters",
+        "type": "HO"
+      },
+      {
+        "name": "redness crusaders",
+        "type": "HO"
+      },
+      {
+        "name": "culto del kraken",
+        "type": "HO"
+      },
+      {
+        "name": "legion of shadowss",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Dryvein Riverbed",
+    "guilds": [
+      {
+        "name": "4fun in black",
+        "type": "HO"
+      },
+      {
+        "name": "nightfall army",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:49:21 p. m."
+  },
+  {
+    "map": "Dryvein Steppe",
+    "guilds": [
+      {
+        "name": "retired",
+        "type": "HO"
+      },
+      {
+        "name": "gankers letales",
+        "type": "HO"
+      },
+      {
+        "name": "zukaritas",
+        "type": "HO"
+      },
+      {
+        "name": "outlimits",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:49:57 p. m."
+  },
+  {
+    "map": "Everwinter Expanse",
+    "guilds": [
+      {
+        "name": "death punch",
+        "type": "HO"
+      },
+      {
+        "name": "delincuentes",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Incline",
+    "guilds": [
+      {
+        "name": "olympus",
+        "type": "HO"
+      },
+      {
+        "name": "retired",
+        "type": "HO"
+      },
+      {
+        "name": "4pm",
+        "type": "HO"
+      },
+      {
+        "name": "thehope",
+        "type": "HO"
+      },
+      {
+        "name": "valhalla kingdom",
+        "type": "HO"
+      },
+      {
+        "name": "please no hit me",
+        "type": "HO"
+      },
+      {
+        "name": "contingent",
+        "type": "HO"
+      },
+      {
+        "name": "opression",
+        "type": "HO"
+      },
+      {
+        "name": "et alia",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Passage",
+    "guilds": [
+      {
+        "name": "retired",
+        "type": "HO"
+      },
+      {
+        "name": "the kingdom of guardians",
+        "type": "HO"
+      },
+      {
+        "name": "valhalla kingdom",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Peak",
+    "guilds": [
+      {
+        "name": "ipanic",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Reach",
+    "guilds": [
+      {
+        "name": "pushcats",
+        "type": "HO"
+      },
+      {
+        "name": "valhalla kingdom",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:58:41 p. m."
+  },
+  {
+    "map": "Everwinter Shores",
+    "guilds": [
+      {
+        "name": "oea",
+        "type": "HO"
+      },
+      {
+        "name": "valhalla kingdom",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Farshore Cape",
+    "guilds": [
+      {
+        "name": "euphoriia",
+        "type": "HO"
+      },
+      {
+        "name": "pay_for_it",
+        "type": "HO"
+      },
+      {
+        "name": "absolute boundary",
+        "type": "HO"
+      },
+      {
+        "name": "date a live",
+        "type": "HO"
+      },
+      {
+        "name": "assassinsgreed",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Farshore Drylands",
+    "guilds": [
+      {
+        "name": "rehab",
+        "type": "HO"
+      },
+      {
+        "name": "gankers letales",
+        "type": "HO"
+      },
+      {
+        "name": "les fr valoir",
+        "type": "HO"
+      },
+      {
+        "name": "dead end",
+        "type": "HO"
+      },
+      {
+        "name": "idem",
+        "type": "HO"
+      },
+      {
+        "name": "corranlabola",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 9:02:59 p. m."
+  },
+  {
+    "map": "Farshore Esker",
+    "guilds": [
+      {
+        "name": "capitain timo",
+        "type": "HO"
+      },
+      {
+        "name": "orden del caos",
+        "type": "HO"
+      },
+      {
+        "name": "sea-sky fraternity",
+        "type": "HO"
+      },
+      {
+        "name": "black dragons aeon",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 9:03:42 p. m."
+  },
+  {
+    "map": "Farshore Heath",
+    "guilds": [
+      {
+        "name": "asmeninassuperpoderosas",
+        "type": "HO"
+      },
+      {
+        "name": "siervos de los antiguos",
+        "type": "HO"
+      },
+      {
+        "name": "swordx",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Farshore Lagoon",
+    "guilds": [
+      {
+        "name": "brasil combat",
+        "type": "HO"
+      },
+      {
+        "name": "euphoriia",
+        "type": "HO"
+      },
+      {
+        "name": "pendragonsbr",
+        "type": "HO"
+      },
+      {
+        "name": "assassinsgreed",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Firesink Caldera",
+    "guilds": [
+      {
+        "name": "clearance",
+        "type": "HO"
+      },
+      {
+        "name": "cesta basica",
+        "type": "HO"
+      },
+      {
+        "name": "not human",
+        "type": "HO"
+      },
+      {
+        "name": "a origem",
+        "type": "HO"
+      },
+      {
+        "name": "arroz clan",
+        "type": "HO"
+      },
+      {
+        "name": "insane squad",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 9:05:12 p. m."
+  },
+  {
+    "map": "Firesink Trench",
+    "guilds": [
+      {
+        "name": "nie tryze",
+        "type": "HO"
+      },
+      {
+        "name": "iberian",
+        "type": "HO"
+      },
+      {
+        "name": "ascended",
+        "type": "HO"
+      },
+      {
+        "name": "gatitos embotellados",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Flatrock Cliffs",
+    "guilds": [
+      {
+        "name": "deorum mortis",
+        "type": "HO"
+      },
+      {
+        "name": "the bacons",
+        "type": "HO"
+      },
+      {
+        "name": "insolent",
+        "type": "HO"
+      },
+      {
+        "name": "mute zone",
+        "type": "HO"
+      },
+      {
+        "name": "hemp rats cartel",
+        "type": "HO"
+      },
+      {
+        "name": "cest la mort",
+        "type": "HO"
+      },
+      {
+        "name": "the dungeuon of the black compa",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:48:41 a. m."
+  },
+  {
+    "map": "Flatrock Plateau",
+    "guilds": [
+      {
+        "name": "fragmento de pangea",
+        "type": "HO"
+      },
+      {
+        "name": "eternity fame",
+        "type": "HO"
+      },
+      {
+        "name": "jomsvikings",
+        "type": "HO"
+      },
+      {
+        "name": "strategus",
+        "type": "HO"
+      },
+      {
+        "name": "noxos",
+        "type": "HO"
+      },
+      {
+        "name": "black clovers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Floatshoal Floe",
+    "guilds": [
+      {
+        "name": "farm glory",
+        "type": "HO"
+      },
+      {
+        "name": "witiess mercenaries tavern",
+        "type": "HO"
+      },
+      {
+        "name": "grifinoria",
+        "type": "HO"
+      },
+      {
+        "name": "les coeurs draconiques",
+        "type": "HO"
+      },
+      {
+        "name": "army bears",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Frostspring Passage",
+    "guilds": [
+      {
+        "name": "the ghosts",
+        "type": "HO"
+      },
+      {
+        "name": "loniez",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Frostspring Volcano",
+    "guilds": [
+      {
+        "name": "the rugrats",
+        "type": "HO"
+      },
+      {
+        "name": "infinity",
+        "type": "HO"
+      },
+      {
+        "name": "la federacion y",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Giantweald Copse",
+    "guilds": [
+      {
+        "name": "never what",
+        "type": "HO"
+      },
+      {
+        "name": "burnin",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Giantweald Dale",
+    "guilds": [
+      {
+        "name": "mute zone",
+        "type": "HO"
+      },
+      {
+        "name": "cynders",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:55:28 a. m."
+  },
+  {
+    "map": "Giantweald Edge",
+    "guilds": [
+      {
+        "name": "infinite astrolis",
+        "type": "HO"
+      },
+      {
+        "name": "tierra media",
+        "type": "HO"
+      },
+      {
+        "name": "sectum prime",
+        "type": "HO"
+      },
+      {
+        "name": "shroom squad",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:58:43 a. m."
+  },
+  {
+    "map": "Giantweald Glade",
+    "guilds": [
+      {
+        "name": "the boss world",
+        "type": "HO"
+      },
+      {
+        "name": "skyrim",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Giantweald Roots",
+    "guilds": [
+      {
+        "name": "fnatic",
+        "type": "HO"
+      },
+      {
+        "name": "deorum mortis",
+        "type": "HO"
+      },
+      {
+        "name": "spence",
+        "type": "HO"
+      },
+      {
+        "name": "primoria",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Giantweald Woods",
+    "guilds": [
+      {
+        "name": "last bober dance",
+        "type": "HO"
+      },
+      {
+        "name": "eikonic",
+        "type": "HO"
+      },
+      {
+        "name": "arcosanti",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:05:04 a. m."
+  },
+  {
+    "map": "Gravemound Brim",
+    "guilds": [
+      {
+        "name": "team of death",
+        "type": "HO"
+      },
+      {
+        "name": "reyes del respawn",
+        "type": "HO"
+      },
+      {
+        "name": "shroom squad",
+        "type": "HO"
+      },
+      {
+        "name": "onliners",
+        "type": "HO"
+      },
+      {
+        "name": "l200",
+        "type": "HO"
+      },
+      {
+        "name": "ethernal glory",
+        "type": "HO"
+      },
+      {
+        "name": "chaosforce",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:11:10 a. m."
+  },
+  {
+    "map": "Gravemound Cliffs",
+    "guilds": [
+      {
+        "name": "world of petes",
+        "type": "HO"
+      },
+      {
+        "name": "highskull",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:11:54 a. m."
+  },
+  {
+    "map": "Gravemound Hills",
+    "guilds": [
+      {
+        "name": "gankers letales",
+        "type": "HO"
+      },
+      {
+        "name": "aesirs",
+        "type": "HO"
+      },
+      {
+        "name": "el reino de la pica",
+        "type": "HO"
+      },
+      {
+        "name": "conflic",
+        "type": "HO"
+      },
+      {
+        "name": "keepers of te quagmire",
+        "type": "HO"
+      },
+      {
+        "name": "exodus",
+        "type": "HO"
+      },
+      {
+        "name": "last deas",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Gravemound Knoll",
+    "guilds": [
+      {
+        "name": "sea-sky fraternity",
+        "type": "HO"
+      },
+      {
+        "name": "true gentleman",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:13:56 a. m."
+  },
+  {
+    "map": "Gravemound Slope",
+    "guilds": [
+      {
+        "name": "mafia sindical",
+        "type": "HO"
+      },
+      {
+        "name": "helheim",
+        "type": "HO"
+      },
+      {
+        "name": "eikonic",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "19-10-2025, 7:32:27 p. m."
+  },
+  {
+    "map": "Greenhollow Copse",
+    "guilds": [
+      {
+        "name": "nagasaki",
+        "type": "HO"
+      },
+      {
+        "name": "la furia de midgard",
+        "type": "HO"
+      },
+      {
+        "name": "it s show time",
+        "type": "HO"
+      },
+      {
+        "name": "asmeninassuperpoderosas",
+        "type": "HO"
+      },
+      {
+        "name": "el indio solari",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:15:13 a. m."
+  },
+  {
+    "map": "Greenhollow Vale",
+    "guilds": [
+      {
+        "name": "hunter assasins",
+        "type": "HO"
+      },
+      {
+        "name": "los pochoclos",
+        "type": "HO"
+      },
+      {
+        "name": "grougaloragran",
+        "type": "HO"
+      },
+      {
+        "name": "warlocks legin",
+        "type": "HO"
+      },
+      {
+        "name": "paladines de teemo",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:16:34 a. m."
+  },
+  {
+    "map": "Greenshore Bay",
+    "guilds": [
+      {
+        "name": "explocion de sabor",
+        "type": "HO"
+      },
+      {
+        "name": "furia divina",
+        "type": "HO"
+      },
+      {
+        "name": "not human",
+        "type": "HO"
+      },
+      {
+        "name": "aponia",
+        "type": "HO"
+      },
+      {
+        "name": "viral",
+        "type": "HO"
+      },
+      {
+        "name": "hiden assassins",
+        "type": "HO"
+      },
+      {
+        "name": "the plaga",
+        "type": "HO"
+      },
+      {
+        "name": "exiliados",
+        "type": "HO"
+      },
+      {
+        "name": "snusnu",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:18:06 a. m."
+  },
+  {
+    "map": "Greenshore Peninsula",
+    "guilds": [
+      {
+        "name": "furore",
+        "type": "HO"
+      },
+      {
+        "name": "black hand",
+        "type": "HO"
+      },
+      {
+        "name": "los caballeros del onichan",
+        "type": "HO"
+      },
+      {
+        "name": "contingent",
+        "type": "HO"
+      },
+      {
+        "name": "los yaguarete",
+        "type": "HO"
+      },
+      {
+        "name": "motley crusade",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Highstone Grassland",
+    "guilds": [
+      {
+        "name": "rainbow kitten",
+        "type": "HO"
+      },
+      {
+        "name": "black lotus",
+        "type": "HO"
+      },
+      {
+        "name": "arkadia world",
+        "type": "HO"
+      },
+      {
+        "name": "pvp full",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "14-10-2025, 12:52:49 a. m."
+  },
+  {
+    "map": "Highstone Loch",
+    "guilds": [
+      {
+        "name": "midnightd",
+        "type": "HO"
+      },
+      {
+        "name": "vatos locos",
+        "type": "HO"
+      },
+      {
+        "name": "error 404 not found",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Highstone Meadow",
+    "guilds": [
+      {
+        "name": "gankstaz paradise",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Highstone Mound",
+    "guilds": [
+      {
+        "name": "jamaica",
+        "type": "HO"
+      },
+      {
+        "name": "error 404 not found",
+        "type": "HO"
+      },
+      {
+        "name": "revoada",
+        "type": "HO"
+      },
+      {
+        "name": "flashback",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Highstone Plains",
+    "guilds": [
+      {
+        "name": "moon worshipers",
+        "type": "HO"
+      },
+      {
+        "name": "shroom squad",
+        "type": "HO"
+      },
+      {
+        "name": "la revelion",
+        "type": "HO"
+      },
+      {
+        "name": "wolfsfate",
+        "type": "HO"
+      },
+      {
+        "name": "mistery",
+        "type": "HO"
+      },
+      {
+        "name": "tributos",
+        "type": "HO"
+      },
+      {
+        "name": "templares order",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Hightree Borderlands",
+    "guilds": [
+      {
+        "name": "furian",
+        "type": "HO"
+      },
+      {
+        "name": "daonenonly",
+        "type": "HO"
+      },
+      {
+        "name": "mistery of galaxy",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Hightree Cliffs",
+    "guilds": [
+      {
+        "name": "crux del sur",
+        "type": "HO"
+      },
+      {
+        "name": "fryda",
+        "type": "HO"
+      },
+      {
+        "name": "intergalactic space hobos",
+        "type": "HO"
+      },
+      {
+        "name": "arcosanti",
+        "type": "HO"
+      },
+      {
+        "name": "exodus xxv",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:31:07 a. m."
+  },
+  {
+    "map": "Hightree Hillock",
+    "guilds": [
+      {
+        "name": "whitelotus",
+        "type": "HO"
+      },
+      {
+        "name": "spetsnaz grail",
+        "type": "HO"
+      },
+      {
+        "name": "predador",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:31:40 a. m."
+  },
+  {
+    "map": "Hightree Isle",
+    "guilds": [
+      {
+        "name": "argentinidad",
+        "type": "HO"
+      },
+      {
+        "name": "black lotus",
+        "type": "HO"
+      },
+      {
+        "name": "requiem",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "18-10-2025, 4:27:22 p. m."
+  },
+  {
+    "map": "Hightree Levee",
+    "guilds": [
+      {
+        "name": "furia divina",
+        "type": "HO"
+      },
+      {
+        "name": "life is game",
+        "type": "HO"
+      },
+      {
+        "name": "chronus",
+        "type": "HO"
+      },
+      {
+        "name": "valkarion",
+        "type": "HO"
+      },
+      {
+        "name": "honoris",
+        "type": "HO"
+      },
+      {
+        "name": "flashback",
+        "type": "HO"
+      },
+      {
+        "name": "innocent soldiers",
+        "type": "HO"
+      },
+      {
+        "name": "road of ruins",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:35:15 a. m."
+  },
+  {
+    "map": "Hightree Pass",
+    "guilds": [
+      {
+        "name": "assassins of valhalla",
+        "type": "HO"
+      },
+      {
+        "name": "winter raven",
+        "type": "HO"
+      },
+      {
+        "name": "outset",
+        "type": "HO"
+      },
+      {
+        "name": "the underway",
+        "type": "HO"
+      },
+      {
+        "name": "souls fire",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:35:48 a. m."
+  },
+  {
+    "map": "Longfen Arms",
+    "guilds": [
+      {
+        "name": "cassiopea",
+        "type": "HO"
+      },
+      {
+        "name": "ulta",
+        "type": "HO"
+      },
+      {
+        "name": "tesa",
+        "type": "HO"
+      },
+      {
+        "name": "this promise",
+        "type": "HO"
+      },
+      {
+        "name": "lusitania",
+        "type": "HO"
+      },
+      {
+        "name": "eternal knights of shadows",
+        "type": "HO"
+      },
+      {
+        "name": "dpszero",
+        "type": "HO"
+      },
+      {
+        "name": "antartida",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:43:30 a. m."
+  },
+  {
+    "map": "Longfen Marsh",
+    "guilds": [
+      {
+        "name": "life is game",
+        "type": "HO"
+      },
+      {
+        "name": "we profit",
+        "type": "HO"
+      },
+      {
+        "name": "spookybr",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Longfen Veins",
+    "guilds": [
+      {
+        "name": "tierra media",
+        "type": "HO"
+      },
+      {
+        "name": "ephemerals",
+        "type": "HO"
+      },
+      {
+        "name": "tu mamma",
+        "type": "HO"
+      },
+      {
+        "name": "sunofgods",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Meltwater Bog",
+    "guilds": [
+      {
+        "name": "oa unirversity",
+        "type": "HO"
+      },
+      {
+        "name": "militant",
+        "type": "HO"
+      },
+      {
+        "name": "keybump",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Meltwater Delta",
+    "guilds": [
+      {
+        "name": "retired",
+        "type": "HO"
+      },
+      {
+        "name": "hiyoko gakkou",
+        "type": "HO"
+      },
+      {
+        "name": "crux del sur",
+        "type": "HO"
+      },
+      {
+        "name": "vanguard killers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:53:00 a. m."
+  },
+  {
+    "map": "Meltwater Sump",
+    "guilds": [
+      {
+        "name": "vikingoz",
+        "type": "HO"
+      },
+      {
+        "name": "euphoria",
+        "type": "HO"
+      },
+      {
+        "name": "et cetera",
+        "type": "HO"
+      },
+      {
+        "name": "crux del sur",
+        "type": "HO"
+      },
+      {
+        "name": "gatitos embotellados",
+        "type": "HO"
+      },
+      {
+        "name": "the kingdom of guardians",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Murdergulch Cross",
+    "guilds": [
+      {
+        "name": "revenge",
+        "type": "HO"
+      },
+      {
+        "name": "ex tenebris",
+        "type": "HO"
+      },
+      {
+        "name": "vk army",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Murdergulch Gap",
+    "guilds": [
+      {
+        "name": "rogue natives",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Murdergulch Trail",
+    "guilds": [
+      {
+        "name": "argentinidad",
+        "type": "HO"
+      },
+      {
+        "name": "demon fangs",
+        "type": "HO"
+      },
+      {
+        "name": "memento mori",
+        "type": "HO"
+      },
+      {
+        "name": "alea iacta est",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Northstrand Beach",
+    "guilds": [
+      {
+        "name": "sololeveling",
+        "type": "HO"
+      },
+      {
+        "name": "death punch",
+        "type": "HO"
+      },
+      {
+        "name": "grizzly bears",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Northstrand Dunes",
+    "guilds": [
+      {
+        "name": "simps de camila",
+        "type": "HO"
+      },
+      {
+        "name": "mistwalkers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Parchsand Cliffs",
+    "guilds": [
+      {
+        "name": "diablos",
+        "type": "HO"
+      },
+      {
+        "name": "gankers letales",
+        "type": "HO"
+      },
+      {
+        "name": "victory or death",
+        "type": "HO"
+      },
+      {
+        "name": "morbidly obese",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Parchsand Drought",
+    "guilds": [
+      {
+        "name": "contingent",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Razorrock Bank",
+    "guilds": [
+      {
+        "name": "violent souls",
+        "type": "HO"
+      },
+      {
+        "name": "arlse",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Razorrock Passage",
+    "guilds": [
+      {
+        "name": "cuys in the clap",
+        "type": "HO"
+      },
+      {
+        "name": "memento mori",
+        "type": "HO"
+      },
+      {
+        "name": "alea iacta est",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Razorrock Valley",
+    "guilds": [
+      {
+        "name": "made in china",
+        "type": "HO"
+      },
+      {
+        "name": "maga",
+        "type": "HO"
+      },
+      {
+        "name": "last bench",
+        "type": "HO"
+      },
+      {
+        "name": "full tier 3",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:57:44 a. m."
+  },
+  {
+    "map": "Redtree Enclave",
+    "guilds": [
+      {
+        "name": "daeomon",
+        "type": "HO"
+      },
+      {
+        "name": "euphoria",
+        "type": "HO"
+      },
+      {
+        "name": "post mortemm",
+        "type": "HO"
+      },
+      {
+        "name": "targaryen esports",
+        "type": "HO"
+      },
+      {
+        "name": "olympus",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:58:53 a. m."
+  },
+  {
+    "map": "Rivercopse Crossing",
+    "guilds": [
+      {
+        "name": "imortais",
+        "type": "HO"
+      },
+      {
+        "name": "sliced",
+        "type": "HO"
+      },
+      {
+        "name": "maga",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:59:36 a. m."
+  },
+  {
+    "map": "Rivercopse Curve",
+    "guilds": [
+      {
+        "name": "she never love me",
+        "type": "HO"
+      },
+      {
+        "name": "el ultimo reino",
+        "type": "HO"
+      },
+      {
+        "name": "rogue natives",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Rivercopse Fount",
+    "guilds": [
+      {
+        "name": "4pm",
+        "type": "HO"
+      },
+      {
+        "name": "pivas",
+        "type": "HO"
+      },
+      {
+        "name": "la vaquita saturnita",
+        "type": "HO"
+      },
+      {
+        "name": "aponia",
+        "type": "HO"
+      },
+      {
+        "name": "arlse",
+        "type": "HO"
+      },
+      {
+        "name": "interdits",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Rivercopse Path",
+    "guilds": [
+      {
+        "name": "legacy corporation",
+        "type": "HO"
+      },
+      {
+        "name": "radiant",
+        "type": "HO"
+      },
+      {
+        "name": "morrodourubu",
+        "type": "HO"
+      },
+      {
+        "name": "moshi moshi",
+        "type": "HO"
+      },
+      {
+        "name": "the jokers",
+        "type": "HO"
+      },
+      {
+        "name": "fearless dragons",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:01:37 a. m."
+  },
+  {
+    "map": "Sandrift Dunes",
+    "guilds": [
+      {
+        "name": "sturmbringers",
+        "type": "HO"
+      },
+      {
+        "name": "overlord log horizon",
+        "type": "HO"
+      },
+      {
+        "name": "nerium oleander",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:06:41 a. m."
+  },
+  {
+    "map": "Sandrift Expanse",
+    "guilds": [
+      {
+        "name": "hoplita",
+        "type": "HO"
+      },
+      {
+        "name": "shadow garden",
+        "type": "HO"
+      },
+      {
+        "name": "retired",
+        "type": "HO"
+      },
+      {
+        "name": "i think so",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:07:20 a. m."
+  },
+  {
+    "map": "Sandrift Fringe",
+    "guilds": [
+      {
+        "name": "abbadon",
+        "type": "HO"
+      },
+      {
+        "name": "crux del sur",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sandrift Shore",
+    "guilds": [
+      {
+        "name": "royal ratpack",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sandrift Steppe",
+    "guilds": [
+      {
+        "name": "take ir easy",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Scuttlesink Marsh",
+    "guilds": [
+      {
+        "name": "outlimits",
+        "type": "HO"
+      },
+      {
+        "name": "muxolots",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Scuttlesink Mouth",
+    "guilds": [
+      {
+        "name": "the comunity",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:08:40 a. m."
+  },
+  {
+    "map": "Scuttlesink Pools",
+    "guilds": [
+      {
+        "name": "inspeccion de billeteras",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Shaleheath Hills",
+    "guilds": [
+      {
+        "name": "diablos",
+        "type": "HO"
+      },
+      {
+        "name": "death punch",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Shaleheath Steep",
+    "guilds": [
+      {
+        "name": "outlimits",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Skylake Bridge",
+    "guilds": [
+      {
+        "name": "insolent",
+        "type": "HO"
+      },
+      {
+        "name": "milharai",
+        "type": "HO"
+      },
+      {
+        "name": "amoral",
+        "type": "HO"
+      },
+      {
+        "name": "darkchains",
+        "type": "HO"
+      },
+      {
+        "name": "ddarth",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:10:39 a. m."
+  },
+  {
+    "map": "Skylake Hinterlands",
+    "guilds": [
+      {
+        "name": "desavence",
+        "type": "HO"
+      },
+      {
+        "name": "the plaga",
+        "type": "HO"
+      },
+      {
+        "name": "neve eterna",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Southgrove Copse",
+    "guilds": [
+      {
+        "name": "rulers",
+        "type": "HO"
+      },
+      {
+        "name": "maniac bears",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Southgrove Escarp",
+    "guilds": [
+      {
+        "name": "executor",
+        "type": "HO"
+      },
+      {
+        "name": "date a live",
+        "type": "HO"
+      },
+      {
+        "name": "guess what",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Springsump Basin",
+    "guilds": [
+      {
+        "name": "killer ducks",
+        "type": "HO"
+      },
+      {
+        "name": "green shield",
+        "type": "HO"
+      },
+      {
+        "name": "wolf pack albion",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:13:10 a. m."
+  },
+  {
+    "map": "Springsump Melt",
+    "guilds": [
+      {
+        "name": "legendarios",
+        "type": "HO"
+      },
+      {
+        "name": "sunofgods",
+        "type": "HO"
+      },
+      {
+        "name": "abbadon",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Springsump Wetland",
+    "guilds": [
+      {
+        "name": "the black dragons br",
+        "type": "HO"
+      },
+      {
+        "name": "a origem",
+        "type": "HO"
+      },
+      {
+        "name": "beleghost",
+        "type": "HO"
+      },
+      {
+        "name": "paladins300",
+        "type": "HO"
+      },
+      {
+        "name": "shadow garden",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Stonelake Fields",
+    "guilds": [
+      {
+        "name": "last dead",
+        "type": "HO"
+      },
+      {
+        "name": "no skip",
+        "type": "HO"
+      },
+      {
+        "name": "loniez",
+        "type": "HO"
+      },
+      {
+        "name": "the jolly rogerz",
+        "type": "HO"
+      },
+      {
+        "name": "forja dos novatos",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:15:33 a. m."
+  },
+  {
+    "map": "Stonelake Hillock",
+    "guilds": [
+      {
+        "name": "girei",
+        "type": "HO"
+      },
+      {
+        "name": "golden horde",
+        "type": "HO"
+      },
+      {
+        "name": "heretic network",
+        "type": "HO"
+      },
+      {
+        "name": "soldados do kong",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:16:08 a. m."
+  },
+  {
+    "map": "Stonemouth Northbluff",
+    "guilds": [
+      {
+        "name": "brasil army",
+        "type": "HO"
+      },
+      {
+        "name": "gorila",
+        "type": "HO"
+      },
+      {
+        "name": "caballeros del pasado",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Stonemouth Southbluff",
+    "guilds": [
+      {
+        "name": "the looney tunes",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:16:44 a. m."
+  },
+  {
+    "map": "Sunfang Approach",
+    "guilds": [
+      {
+        "name": "retired",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sunfang Cliffs",
+    "guilds": [
+      {
+        "name": "pivas",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sunfang Dawn",
+    "guilds": [
+      {
+        "name": "pivas",
+        "type": "HO"
+      },
+      {
+        "name": "dinoco",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sunfang Ravine",
+    "guilds": [
+      {
+        "name": "neve eterna",
+        "type": "HO"
+      },
+      {
+        "name": "assassinsgreed",
+        "type": "HO"
+      },
+      {
+        "name": "buster call",
+        "type": "HO"
+      },
+      {
+        "name": "die hard gaming",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:18:14 a. m."
+  },
+  {
+    "map": "Sunfang Wasteland",
+    "guilds": [
+      {
+        "name": "rush b",
+        "type": "HO"
+      },
+      {
+        "name": "thispromise",
+        "type": "HO"
+      },
+      {
+        "name": "dinoco",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sunstrand Delta",
+    "guilds": [
+      {
+        "name": "evil pig b",
+        "type": "HO"
+      },
+      {
+        "name": "mushroomoverdose",
+        "type": "HO"
+      },
+      {
+        "name": "berserkers ca",
+        "type": "HO"
+      },
+      {
+        "name": "onetap",
+        "type": "HO"
+      },
+      {
+        "name": "osos autistas",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:20:30 a. m."
+  },
+  {
+    "map": "Sunstrand Dunes",
+    "guilds": [
+      {
+        "name": "los choripaneros atr",
+        "type": "HO"
+      },
+      {
+        "name": "the baspar",
+        "type": "HO"
+      },
+      {
+        "name": "chaosforce",
+        "type": "HO"
+      },
+      {
+        "name": "kill or be killed",
+        "type": "HO"
+      },
+      {
+        "name": "los ocupas",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:21:10 a. m."
+  },
+  {
+    "map": "Sunstrand Quicksands",
+    "guilds": [
+      {
+        "name": "requiem",
+        "type": "HO"
+      },
+      {
+        "name": "guess what",
+        "type": "HO"
+      },
+      {
+        "name": "abbadon",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sunstrand Shoal",
+    "guilds": [
+      {
+        "name": "the lonely skibidi",
+        "type": "HO"
+      },
+      {
+        "name": "champ squad",
+        "type": "HO"
+      },
+      {
+        "name": "the rugrats",
+        "type": "HO"
+      },
+      {
+        "name": "dreamgem",
+        "type": "HO"
+      },
+      {
+        "name": "golden horde",
+        "type": "HO"
+      },
+      {
+        "name": "vanguard killers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Thirstwater Gully",
+    "guilds": [
+      {
+        "name": "error 404 not found",
+        "type": "HO"
+      },
+      {
+        "name": "calcinha de renda",
+        "type": "HO"
+      },
+      {
+        "name": "anti sociais",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Thirstwater Steppe",
+    "guilds": [
+      {
+        "name": "furia divina",
+        "type": "HO"
+      },
+      {
+        "name": "fallen stars",
+        "type": "HO"
+      },
+      {
+        "name": "honoris 2",
+        "type": "HO"
+      },
+      {
+        "name": "honoris",
+        "type": "HO"
+      },
+      {
+        "name": "fallen angels",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:24:11 a. m."
+  },
+  {
+    "map": "Thirstwater Waste",
+    "guilds": [
+      {
+        "name": "los caballeros del onichan",
+        "type": "HO"
+      },
+      {
+        "name": "imperio makus",
+        "type": "HO"
+      },
+      {
+        "name": "apeiron",
+        "type": "HO"
+      },
+      {
+        "name": "unos",
+        "type": "HO"
+      },
+      {
+        "name": "doin you ditry",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Thunderrock Draw",
+    "guilds": [
+      {
+        "name": "monos con navaja",
+        "type": "HO"
+      },
+      {
+        "name": "interdits",
+        "type": "HO"
+      },
+      {
+        "name": "kuros hell",
+        "type": "HO"
+      },
+      {
+        "name": "sons off anarchy guild",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Thunderrock Rapids",
+    "guilds": [
+      {
+        "name": "c418",
+        "type": "HO"
+      },
+      {
+        "name": "noseat",
+        "type": "HO"
+      },
+      {
+        "name": "spetsnaz grail",
+        "type": "HO"
+      },
+      {
+        "name": "honoris",
+        "type": "HO"
+      },
+      {
+        "name": "old money",
+        "type": "HO"
+      },
+      {
+        "name": "anti hype rus",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Timberscar Copse",
+    "guilds": [
+      {
+        "name": "we trade",
+        "type": "HO"
+      },
+      {
+        "name": "absolute cinema",
+        "type": "HO"
+      },
+      {
+        "name": "espadachines negros",
+        "type": "HO"
+      },
+      {
+        "name": "dark fayer",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Timberscar Dell",
+    "guilds": [
+      {
+        "name": "espadachines negros",
+        "type": "HO"
+      },
+      {
+        "name": "mas respeto",
+        "type": "HO"
+      },
+      {
+        "name": "caida de la corona",
+        "type": "HO"
+      },
+      {
+        "name": "new warriors",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:26:30 a. m."
+  },
+  {
+    "map": "Timberslope Bridge",
+    "guilds": [
+      {
+        "name": "canalha",
+        "type": "HO"
+      },
+      {
+        "name": "annihilation",
+        "type": "HO"
+      },
+      {
+        "name": "jardim do sol",
+        "type": "HO"
+      },
+      {
+        "name": "army bears",
+        "type": "HO"
+      },
+      {
+        "name": "latin warriors",
+        "type": "HO"
+      },
+      {
+        "name": "deorum mortis",
+        "type": "HO"
+      },
+      {
+        "name": "trasure tales",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Timberslope Dell",
+    "guilds": [
+      {
+        "name": "darkness inc",
+        "type": "HO"
+      },
+      {
+        "name": "vvolfpack",
+        "type": "HO"
+      },
+      {
+        "name": "the new order",
+        "type": "HO"
+      },
+      {
+        "name": "rats of gold imperium reborn",
+        "type": "HO"
+      },
+      {
+        "name": "eikonick",
+        "type": "HO"
+      },
+      {
+        "name": "furia nocturna",
+        "type": "HO"
+      },
+      {
+        "name": "royal destroyers",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:29:21 a. m."
+  },
+  {
+    "map": "Timberslope Grove",
+    "guilds": [
+      {
+        "name": "rogue natives academy",
+        "type": "HO"
+      },
+      {
+        "name": "exalted",
+        "type": "HO"
+      },
+      {
+        "name": "daoism",
+        "type": "HO"
+      },
+      {
+        "name": "the elder tree",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Timbertop Dale",
+    "guilds": [
+      {
+        "name": "gatitos mimoshos",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:30:25 a. m."
+  },
+  {
+    "map": "Timbertop Escarp",
+    "guilds": [
+      {
+        "name": "outlimits",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Timbertop Wood",
+    "guilds": [
+      {
+        "name": "valhalla kingdom",
+        "type": "HO"
+      },
+      {
+        "name": "death punch",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Watchwood Bluffs",
+    "guilds": [
+      {
+        "name": "whitelotus",
+        "type": "HO"
+      },
+      {
+        "name": "peaky",
+        "type": "HO"
+      },
+      {
+        "name": "wanted pks",
+        "type": "HO"
+      },
+      {
+        "name": "solo players",
+        "type": "HO"
+      },
+      {
+        "name": "los osos de albion",
+        "type": "HO"
+      },
+      {
+        "name": "escuadron suicida fama",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:31:54 a. m."
+  },
+  {
+    "map": "Watchwood Grove",
+    "guilds": [
+      {
+        "name": "mlpwny",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Watchwood Lakeside",
+    "guilds": [
+      {
+        "name": "royal dynasty",
+        "type": "HO"
+      },
+      {
+        "name": "los caballeros del onichan",
+        "type": "HO"
+      },
+      {
+        "name": "graymane",
+        "type": "HO"
+      },
+      {
+        "name": "la federacion y",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Westweald Shore",
+    "guilds": [
+      {
+        "name": "barclass",
+        "type": "HO"
+      },
+      {
+        "name": "mandatory",
+        "type": "HO"
+      },
+      {
+        "name": "victory or death",
+        "type": "HO"
+      },
+      {
+        "name": "la orden del colmillo negro",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Westweald Thicket",
+    "guilds": [
+      {
+        "name": "farmers ac",
+        "type": "HO"
+      },
+      {
+        "name": "nexus",
+        "type": "HO"
+      },
+      {
+        "name": "pks society",
+        "type": "HO"
+      },
+      {
+        "name": "cavaleiros avalonianos",
+        "type": "HO"
+      },
+      {
+        "name": "nevada",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Whitewall Pass",
+    "guilds": [
+      {
+        "name": "snake skin",
+        "type": "HO"
+      },
+      {
+        "name": "smell of fear",
+        "type": "HO"
+      },
+      {
+        "name": "imortais",
+        "type": "HO"
+      },
+      {
+        "name": "keybums",
+        "type": "HO"
+      },
+      {
+        "name": "ifures",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:36:19 a. m."
+  },
+  {
+    "map": "Whitewall Ridge",
+    "guilds": [
+      {
+        "name": "les albinos",
+        "type": "HO"
+      },
+      {
+        "name": "cyan",
+        "type": "HO"
+      },
+      {
+        "name": "swordx",
+        "type": "HO"
+      },
+      {
+        "name": "fnatic",
+        "type": "HO"
+      },
+      {
+        "name": "elixirs",
+        "type": "HO"
+      },
+      {
+        "name": "pay for it",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:37:02 a. m."
+  },
+  {
+    "map": "Windgrass Coast",
+    "guilds": [
+      {
+        "name": "one piece",
+        "type": "HO"
+      },
+      {
+        "name": "warriors company",
+        "type": "HO"
+      },
+      {
+        "name": "tributos",
+        "type": "HO"
+      },
+      {
+        "name": "no profit",
+        "type": "HO"
+      },
+      {
+        "name": "elixir of life",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Windgrass Fields",
+    "guilds": [
+      {
+        "name": "thespartansquad",
+        "type": "HO"
+      },
+      {
+        "name": "la orden del colmillo negro",
+        "type": "HO"
+      },
+      {
+        "name": "rivendelhome",
+        "type": "HO"
+      },
+      {
+        "name": "union of knight",
+        "type": "HO"
+      },
+      {
+        "name": "dont cry",
+        "type": "HO"
+      },
+      {
+        "name": "public display of assault",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:49:27 a. m."
+  },
+  {
+    "map": "Windgrass Precipice",
+    "guilds": [
+      {
+        "name": "mafia sindical",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Windgrass Terrace",
+    "guilds": [
+      {
+        "name": "mlpwny",
+        "type": "HO"
+      },
+      {
+        "name": "vk army",
+        "type": "HO"
+      },
+      {
+        "name": "throwing chair",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Flammog Desolation",
+    "guilds": [
+      {
+        "name": "latinwarriors",
+        "type": "HO"
+      },
+      {
+        "name": "sliced",
+        "type": "HO"
+      },
+      {
+        "name": "jamaica",
+        "type": "HO"
+      },
+      {
+        "name": "delincuentes",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "18-10-2025, 8:33:51 p. m."
+  },
+  {
+    "map": "Floatshoal Fissure",
+    "guilds": [
+      {
+        "name": "thehope",
+        "type": "HO"
+      },
+      {
+        "name": "ghost kingdom",
+        "type": "HO"
+      },
+      {
+        "name": "mortadelo force",
+        "type": "HO"
+      },
+      {
+        "name": "verydificul",
+        "type": "HO"
+      },
+      {
+        "name": "arland",
+        "type": "HO"
+      },
+      {
+        "name": "the jolly rogerz",
+        "type": "HO"
+      },
+      {
+        "name": "thehordegm",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:51:13 a. m."
+  },
+  {
+    "map": "Floatshoal Bight",
+    "guilds": [
+      {
+        "name": "deux aias",
+        "type": "HO"
+      },
+      {
+        "name": "linhir",
+        "type": "HO"
+      },
+      {
+        "name": "mors",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:50:10 a. m."
+  },
+  {
+    "map": "Flammog Valley",
+    "guilds": [
+      {
+        "name": "abbadon",
+        "type": "HO"
+      },
+      {
+        "name": "battlewise",
+        "type": "HO"
+      },
+      {
+        "name": "no way home",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:46:00 a. m."
+  },
+  {
+    "map": "Flammog Fork",
+    "guilds": [
+      {
+        "name": "dolly",
+        "type": "HO"
+      },
+      {
+        "name": "perma bears",
+        "type": "HO"
+      },
+      {
+        "name": "wyrmwing",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:45:06 a. m."
+  },
+  {
+    "map": "Iceburn Cliffs",
+    "guilds": [
+      {
+        "name": "calote clt",
+        "type": "HO"
+      },
+      {
+        "name": "cerberus alpha",
+        "type": "HO"
+      },
+      {
+        "name": "voracity",
+        "type": "HO"
+      },
+      {
+        "name": "dolly",
+        "type": "HO"
+      },
+      {
+        "name": "novus imperium",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Iceburn Tundra",
+    "guilds": [
+      {
+        "name": "azeroth",
+        "type": "HO"
+      },
+      {
+        "name": "cecot",
+        "type": "HO"
+      },
+      {
+        "name": "army bears",
+        "type": "HO"
+      },
+      {
+        "name": "filo santo",
+        "type": "HO"
+      },
+      {
+        "name": "interdits",
+        "type": "HO"
+      },
+      {
+        "name": "no lineales",
+        "type": "HO"
+      },
+      {
+        "name": "hurts",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:41:46 a. m."
+  },
+  {
+    "map": "Iceburn Peaks",
+    "guilds": [
+      {
+        "name": "constancy",
+        "type": "HO"
+      },
+      {
+        "name": "spence",
+        "type": "HO"
+      },
+      {
+        "name": "night guard",
+        "type": "HO"
+      },
+      {
+        "name": "sliced",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:38:24 a. m."
+  },
+  {
+    "map": "Iceburn Firth",
+    "guilds": [
+      {
+        "name": "interdits",
+        "type": "HO"
+      },
+      {
+        "name": "tic tac",
+        "type": "HO"
+      },
+      {
+        "name": "rampage",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Glacierfall Pass",
+    "guilds": [
+      {
+        "name": "neve eterna",
+        "type": "HO"
+      },
+      {
+        "name": "guess what",
+        "type": "HO"
+      },
+      {
+        "name": "4pm",
+        "type": "HO"
+      },
+      {
+        "name": "gin and tonic",
+        "type": "HO"
+      },
+      {
+        "name": "you okey",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 1:09:08 a. m."
+  },
+  {
+    "map": "Glacierfall Fissure",
+    "guilds": [
+      {
+        "name": "tlm",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Glacierfall Cross",
+    "guilds": [
+      {
+        "name": "not human",
+        "type": "HO"
+      },
+      {
+        "name": "mas respeto",
+        "type": "HO"
+      },
+      {
+        "name": "teleton",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Glacierfall Valley",
+    "guilds": [
+      {
+        "name": "bloody warriors",
+        "type": "HO"
+      },
+      {
+        "name": "la federacion y",
+        "type": "HO"
+      },
+      {
+        "name": "primata mod",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Runnelvein Sink",
+    "guilds": [
+      {
+        "name": "burnin",
+        "type": "HO"
+      },
+      {
+        "name": "rogue natives",
+        "type": "HO"
+      },
+      {
+        "name": "sliced",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:03:57 a. m."
+  },
+  {
+    "map": "Runnelvein Bog",
+    "guilds": [
+      {
+        "name": "last warning",
+        "type": "HO"
+      },
+      {
+        "name": "koalation",
+        "type": "HO"
+      },
+      {
+        "name": "crows reborn",
+        "type": "HO"
+      },
+      {
+        "name": "azeroth",
+        "type": "HO"
+      },
+      {
+        "name": "brilho sombrio",
+        "type": "HO"
+      },
+      {
+        "name": "taverna curupira",
+        "type": "HO"
+      },
+      {
+        "name": "fax",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:03:05 a. m."
+  },
+  {
+    "map": "Runnelvein Slough",
+    "guilds": [
+      {
+        "name": "diced",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Gap",
+    "guilds": [
+      {
+        "name": "aurora luceat",
+        "type": "HO"
+      },
+      {
+        "name": "beary tales",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Plain",
+    "guilds": [
+      {
+        "name": "syndicate",
+        "type": "HO"
+      },
+      {
+        "name": "the exiled",
+        "type": "HO"
+      },
+      {
+        "name": "eldeia",
+        "type": "HO"
+      },
+      {
+        "name": "gatitos embotellados",
+        "type": "HO"
+      },
+      {
+        "name": "knigh blood",
+        "type": "HO"
+      },
+      {
+        "name": "et cetera",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Everwinter Gorge",
+    "guilds": [
+      {
+        "name": "ceifadores de almas",
+        "type": "HO"
+      },
+      {
+        "name": "thrown",
+        "type": "HO"
+      },
+      {
+        "name": "sliced",
+        "type": "HO"
+      },
+      {
+        "name": "phoenix rebels",
+        "type": "HO"
+      },
+      {
+        "name": "sombras do caos",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Drownfield Sink",
+    "guilds": [
+      {
+        "name": "tlm",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Drownfield Quag",
+    "guilds": [
+      {
+        "name": "guess what",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Drownfield Wetland",
+    "guilds": [
+      {
+        "name": "honey fingers",
+        "type": "HO"
+      },
+      {
+        "name": "arkadia world",
+        "type": "HO"
+      },
+      {
+        "name": "last hunt",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:44:56 p. m."
+  },
+  {
+    "map": "Drownfield Slough",
+    "guilds": [
+      {
+        "name": "winterlat",
+        "type": "HO"
+      },
+      {
+        "name": "maquina del mal",
+        "type": "HO"
+      },
+      {
+        "name": "daemon",
+        "type": "HO"
+      },
+      {
+        "name": "rocoto rage",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Drownfield Course",
+    "guilds": [
+      {
+        "name": "grizzly bears",
+        "type": "HO"
+      },
+      {
+        "name": "muliphein",
+        "type": "HO"
+      },
+      {
+        "name": "maquina del mal",
+        "type": "HO"
+      },
+      {
+        "name": "lethal warriors",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:34:38 p. m."
+  },
+  {
+    "map": "Drownfield Mire",
+    "guilds": [
+      {
+        "name": "espadachines negros",
+        "type": "HO"
+      },
+      {
+        "name": "we trade",
+        "type": "HO"
+      },
+      {
+        "name": "beso negro",
+        "type": "HO"
+      },
+      {
+        "name": "u are my profit",
+        "type": "HO"
+      },
+      {
+        "name": "one day",
+        "type": "HO"
+      },
+      {
+        "name": "explore the world",
+        "type": "HO"
+      },
+      {
+        "name": "overprice",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "21-10-2025, 8:36:47 p. m."
+  },
+  {
+    "map": "Murdergulch Divide",
+    "guilds": [
+      {
+        "name": "rogue natives",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Murdergulch Ravine",
+    "guilds": [
+      {
+        "name": "maga",
+        "type": "HO"
+      },
+      {
+        "name": "upside",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sandmount Ascent",
+    "guilds": [
+      {
+        "name": "no holding",
+        "type": "HO"
+      },
+      {
+        "name": "barclass",
+        "type": "HO"
+      },
+      {
+        "name": "mandatory",
+        "type": "HO"
+      },
+      {
+        "name": "it s show time",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:04:55 a. m."
+  },
+  {
+    "map": "Sandmount Desert",
+    "guilds": [
+      {
+        "name": "life is game",
+        "type": "HO"
+      },
+      {
+        "name": "elixir of life",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sandmount Strand",
+    "guilds": [
+      {
+        "name": "rivendelhome",
+        "type": "HO"
+      },
+      {
+        "name": "uwuknights",
+        "type": "HO"
+      },
+      {
+        "name": "die glorreichen sammier",
+        "type": "HO"
+      },
+      {
+        "name": "monasterio",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:06:08 a. m."
+  },
+  {
+    "map": "Sandmount Esker",
+    "guilds": [
+      {
+        "name": "falange del norte",
+        "type": "HO"
+      },
+      {
+        "name": "lendarios br",
+        "type": "HO"
+      },
+      {
+        "name": "sigtryg",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "17-10-2025, 7:05:37 p. m."
+  },
+  {
+    "map": "Widemoor Fen",
+    "guilds": [
+      {
+        "name": "guardianes de asgard",
+        "type": "HO"
+      },
+      {
+        "name": "bencheados",
+        "type": "HO"
+      },
+      {
+        "name": "exxis shadow",
+        "type": "HO"
+      },
+      {
+        "name": "no holding",
+        "type": "HO"
+      },
+      {
+        "name": "crux del sur",
+        "type": "HO"
+      },
+      {
+        "name": "harakiri",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:39:39 a. m."
+  },
+  {
+    "map": "Widemoor Hills",
+    "guilds": [
+      {
+        "name": "les fr valoir",
+        "type": "HO"
+      },
+      {
+        "name": "focaris",
+        "type": "HO"
+      },
+      {
+        "name": "stonersinc",
+        "type": "HO"
+      },
+      {
+        "name": "los caballeros del liro",
+        "type": "HO"
+      },
+      {
+        "name": "muliphein",
+        "type": "HO"
+      },
+      {
+        "name": "perritos enojados",
+        "type": "HO"
+      },
+      {
+        "name": "les hommes de sparte",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Widemoor End",
+    "guilds": [
+      {
+        "name": "world of petes",
+        "type": "HO"
+      },
+      {
+        "name": "new londo rouins",
+        "type": "HO"
+      },
+      {
+        "name": "six poin one",
+        "type": "HO"
+      },
+      {
+        "name": "pirate creed",
+        "type": "HO"
+      },
+      {
+        "name": "defensores thetforth",
+        "type": "HO"
+      },
+      {
+        "name": "no holding",
+        "type": "HO"
+      },
+      {
+        "name": "iceworld",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:38:40 a. m."
+  },
+  {
+    "map": "Widemoor Woods",
+    "guilds": [
+      {
+        "name": "operacao troll",
+        "type": "HO"
+      },
+      {
+        "name": "nictofilia",
+        "type": "HO"
+      },
+      {
+        "name": "thetforever",
+        "type": "HO"
+      },
+      {
+        "name": "knights of empire",
+        "type": "HO"
+      },
+      {
+        "name": "barney y sus amigos",
+        "type": "HO"
+      },
+      {
+        "name": "ancient realm of the scholar",
+        "type": "HO"
+      },
+      {
+        "name": "upside",
+        "type": "HO"
+      },
+      {
+        "name": "espadachines negros",
+        "type": "HO"
+      },
+      {
+        "name": "thealters",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:43:03 a. m."
+  },
+  {
+    "map": "Widemoor Flats",
+    "guilds": [
+      {
+        "name": "new repub",
+        "type": "HO"
+      },
+      {
+        "name": "legion celestial",
+        "type": "HO"
+      },
+      {
+        "name": "la vallee du nord",
+        "type": "HO"
+      },
+      {
+        "name": "no holding",
+        "type": "HO"
+      },
+      {
+        "name": "the baspar",
+        "type": "HO"
+      },
+      {
+        "name": "blam",
+        "type": "HO"
+      },
+      {
+        "name": "los tula rika",
+        "type": "HO"
+      },
+      {
+        "name": "xxolympoxx",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:41:02 a. m."
+  },
+  {
+    "map": "Widemoor Shore",
+    "guilds": [
+      {
+        "name": "black smith",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Widemoor Pool",
+    "guilds": [
+      {
+        "name": "inspeccion de billeteras",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Widemoor Delta",
+    "guilds": [
+      {
+        "name": "a gangue trololo",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Willowshade Hills",
+    "guilds": [
+      {
+        "name": "i think so",
+        "type": "HO"
+      },
+      {
+        "name": "efe",
+        "type": "HO"
+      },
+      {
+        "name": "western legion",
+        "type": "HO"
+      },
+      {
+        "name": "alpha rats",
+        "type": "HO"
+      },
+      {
+        "name": "tallados",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Willowshade Sink",
+    "guilds": [
+      {
+        "name": "antiguos gerreros aztekas",
+        "type": "HO"
+      },
+      {
+        "name": "no lineales",
+        "type": "HO"
+      },
+      {
+        "name": "aurora luceat",
+        "type": "HO"
+      },
+      {
+        "name": "aponia",
+        "type": "HO"
+      },
+      {
+        "name": "instic",
+        "type": "HO"
+      },
+      {
+        "name": "iberserk",
+        "type": "HO"
+      },
+      {
+        "name": "elixir",
+        "type": "HO"
+      },
+      {
+        "name": "da black lotus",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:47:44 a. m."
+  },
+  {
+    "map": "Willowshade Pools",
+    "guilds": [
+      {
+        "name": "xwings",
+        "type": "HO"
+      },
+      {
+        "name": "vk army",
+        "type": "HO"
+      },
+      {
+        "name": "insane squad",
+        "type": "HO"
+      },
+      {
+        "name": "zoldycks",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:46:49 a. m."
+  },
+  {
+    "map": "Willowshade Wetlands",
+    "guilds": [
+      {
+        "name": "namorar nao da xp",
+        "type": "HO"
+      },
+      {
+        "name": "mercenarios de marlock",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Willowshade Mire",
+    "guilds": [
+      {
+        "name": "white nigh light",
+        "type": "HO"
+      },
+      {
+        "name": "insolent",
+        "type": "HO"
+      },
+      {
+        "name": "urquiza dogs",
+        "type": "HO"
+      },
+      {
+        "name": "the ghosts",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Willowshade Lake",
+    "guilds": [
+      {
+        "name": "die ritter gotz von berliching",
+        "type": "HO"
+      },
+      {
+        "name": "lusitania",
+        "type": "HO"
+      },
+      {
+        "name": "road scouts",
+        "type": "HO"
+      },
+      {
+        "name": "grimorio del nucleo dorado",
+        "type": "HO"
+      },
+      {
+        "name": "pvp full",
+        "type": "HO"
+      },
+      {
+        "name": "rehab",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:45:51 a. m."
+  },
+  {
+    "map": "Willowshade Icemarsh",
+    "guilds": [
+      {
+        "name": "irmandade dos renegados",
+        "type": "HO"
+      },
+      {
+        "name": "solaryz",
+        "type": "HO"
+      },
+      {
+        "name": "primacy",
+        "type": "HO"
+      },
+      {
+        "name": "obligatory",
+        "type": "HO"
+      },
+      {
+        "name": "lendarios br",
+        "type": "HO"
+      },
+      {
+        "name": "corvux",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Drytop Riverbed",
+    "guilds": [
+      {
+        "name": "montaraces",
+        "type": "HO"
+      },
+      {
+        "name": "oea",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Drytop Pillars",
+    "guilds": [
+      {
+        "name": "falange",
+        "type": "HO"
+      },
+      {
+        "name": "21stsinn",
+        "type": "HO"
+      },
+      {
+        "name": "quinta ordem",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Whitepeak Tundra",
+    "guilds": [
+      {
+        "name": "vaticanum",
+        "type": "HO"
+      },
+      {
+        "name": "espadachines negros",
+        "type": "HO"
+      },
+      {
+        "name": "we trade",
+        "type": "HO"
+      },
+      {
+        "name": "pulsar",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Whitepeak Spring",
+    "guilds": [
+      {
+        "name": "vk army",
+        "type": "HO"
+      },
+      {
+        "name": "la tribu mocoya",
+        "type": "HO"
+      },
+      {
+        "name": "sunofgods",
+        "type": "HO"
+      },
+      {
+        "name": "death seekers",
+        "type": "HO"
+      },
+      {
+        "name": "pretores",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Whitepeak Ascent",
+    "guilds": [
+      {
+        "name": "beleghost",
+        "type": "HO"
+      },
+      {
+        "name": "la mano d dios",
+        "type": "HO"
+      },
+      {
+        "name": "ex tenebris",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Frostseep Crevasse",
+    "guilds": [
+      {
+        "name": "hati",
+        "type": "HO"
+      },
+      {
+        "name": "instic",
+        "type": "HO"
+      },
+      {
+        "name": "oclock",
+        "type": "HO"
+      },
+      {
+        "name": "los ocupas",
+        "type": "HO"
+      },
+      {
+        "name": "la valle du nord",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 12:52:59 a. m."
+  },
+  {
+    "map": "Frostseep Ravine",
+    "guilds": [
+      {
+        "name": "symmetrie",
+        "type": "HO"
+      },
+      {
+        "name": "you are dead",
+        "type": "HO"
+      },
+      {
+        "name": "eevolution",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "19-10-2025, 7:35:46 p. m."
+  },
+  {
+    "map": "Wetgrave Swale",
+    "guilds": [
+      {
+        "name": "trasure tales",
+        "type": "HO"
+      },
+      {
+        "name": "rogue natives",
+        "type": "HO"
+      },
+      {
+        "name": "tierra media",
+        "type": "HO"
+      },
+      {
+        "name": "mythix",
+        "type": "HO"
+      },
+      {
+        "name": "neve eterna",
+        "type": "HO"
+      },
+      {
+        "name": "arcosanti",
+        "type": "HO"
+      },
+      {
+        "name": "cambada",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Wetgrave Marsh",
+    "guilds": [
+      {
+        "name": "los caballeros del onichan",
+        "type": "HO"
+      },
+      {
+        "name": "the plaga",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:33:51 a. m."
+  },
+  {
+    "map": "Wetgrave Bog",
+    "guilds": [
+      {
+        "name": "north star",
+        "type": "HO"
+      },
+      {
+        "name": "goobers",
+        "type": "HO"
+      },
+      {
+        "name": "deorum mortis",
+        "type": "HO"
+      },
+      {
+        "name": "eevolution",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Swiftsands Chaparral",
+    "guilds": [
+      {
+        "name": "trasure tales",
+        "type": "HO"
+      },
+      {
+        "name": "lotion",
+        "type": "HO"
+      },
+      {
+        "name": "lusitania",
+        "type": "HO"
+      },
+      {
+        "name": "demons and wizards",
+        "type": "HO"
+      },
+      {
+        "name": "eikonic",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Swiftsands Basin",
+    "guilds": [
+      {
+        "name": "los caballeros del onichan",
+        "type": "HO"
+      },
+      {
+        "name": "quinta ordem",
+        "type": "HO"
+      },
+      {
+        "name": "rise of stark",
+        "type": "HO"
+      },
+      {
+        "name": "lusitania",
+        "type": "HO"
+      },
+      {
+        "name": "scoiatael",
+        "type": "HO"
+      },
+      {
+        "name": "the plaga",
+        "type": "HO"
+      },
+      {
+        "name": "outlanders",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "Sunkenbough Spring",
+    "guilds": [
+      {
+        "name": "requiem",
+        "type": "HO"
+      },
+      {
+        "name": "imortais",
+        "type": "HO"
+      },
+      {
+        "name": "honoris",
+        "type": "HO"
+      },
+      {
+        "name": "arcosanti",
+        "type": "HO"
+      },
+      {
+        "name": "classy downs",
+        "type": "HO"
+      },
+      {
+        "name": "kuros hell",
+        "type": "HO"
+      },
+      {
+        "name": "iberian",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:19:12 a. m."
+  },
+  {
+    "map": "Sunkenbough Woods",
+    "guilds": [
+      {
+        "name": "veneno t8",
+        "type": "HO"
+      },
+      {
+        "name": "swordx",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:19:34 a. m."
+  },
+  {
+    "map": "melwater channel",
+    "guilds": [
+      {
+        "name": "pleas no hit me",
+        "type": "HO"
+      },
+      {
+        "name": "spookybr",
+        "type": "HO"
+      },
+      {
+        "name": "mighty frogs",
+        "type": "HO"
+      },
+      {
+        "name": "rageout",
+        "type": "HO"
+      },
+      {
+        "name": "et cetera",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "whitebank stream",
+    "guilds": [
+      {
+        "name": "trash collectors",
+        "type": "HO"
+      },
+      {
+        "name": "trasure tales",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "whitebank ridge",
+    "guilds": [
+      {
+        "name": "lethal warriors",
+        "type": "HO"
+      },
+      {
+        "name": "rise of stark",
+        "type": "HO"
+      },
+      {
+        "name": "helheim",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "whitebank wall",
+    "guilds": [
+      {
+        "name": "perritos enojaditos",
+        "type": "HO"
+      },
+      {
+        "name": "la banda del lobo",
+        "type": "HO"
+      },
+      {
+        "name": "legion brocoli",
+        "type": "HO"
+      },
+      {
+        "name": "devta",
+        "type": "HO"
+      },
+      {
+        "name": "oneofusisinvis",
+        "type": "HO"
+      },
+      {
+        "name": "da black lotus",
+        "type": "HO"
+      },
+      {
+        "name": "knights of the bloood",
+        "type": "HO"
+      },
+      {
+        "name": "mythix",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 3:05:39 a. m."
+  },
+  {
+    "map": "skysand ridge",
+    "guilds": [
+      {
+        "name": "griffins riders",
+        "type": "HO"
+      },
+      {
+        "name": "tlm",
+        "type": "HO"
+      },
+      {
+        "name": "racoon city",
+        "type": "HO"
+      },
+      {
+        "name": "winterlat",
+        "type": "HO"
+      },
+      {
+        "name": "post mortemm",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "18-10-2025, 9:03:58 p. m."
+  },
+  {
+    "map": "skysand plateau",
+    "guilds": [
+      {
+        "name": "black dragon aeon",
+        "type": "HO"
+      },
+      {
+        "name": "lathal warriors",
+        "type": "HO"
+      },
+      {
+        "name": "delincuentes",
+        "type": "HO"
+      },
+      {
+        "name": "post mortemm",
+        "type": "HO"
+      },
+      {
+        "name": "proscriptus",
+        "type": "HO"
+      },
+      {
+        "name": "et cetera",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:56:47 a. m."
+  },
+  {
+    "map": "frostbite chsm",
+    "guilds": [
+      {
+        "name": "les sang merce",
+        "type": "HO"
+      },
+      {
+        "name": "nexus",
+        "type": "HO"
+      },
+      {
+        "name": "hydras",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:50:38 a. m."
+  },
+  {
+    "map": "frostbite mountain",
+    "guilds": [
+      {
+        "name": "life is game",
+        "type": "HO"
+      },
+      {
+        "name": "anti sociais",
+        "type": "HO"
+      },
+      {
+        "name": "la oder del colmillo negro",
+        "type": "HO"
+      },
+      {
+        "name": "axilium claw",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "mudfoot mounds",
+    "guilds": [
+      {
+        "name": "mafia sindical",
+        "type": "HO"
+      },
+      {
+        "name": "el indio solari",
+        "type": "HO"
+      },
+      {
+        "name": "legendarios",
+        "type": "HO"
+      },
+      {
+        "name": "guardianes del abismo",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:54:04 a. m."
+  },
+  {
+    "map": "slakesands canyon",
+    "guilds": [
+      {
+        "name": "notch",
+        "type": "HO"
+      },
+      {
+        "name": "riddle",
+        "type": "HO"
+      },
+      {
+        "name": "volans",
+        "type": "HO"
+      },
+      {
+        "name": "castlevania",
+        "type": "HO"
+      },
+      {
+        "name": "gremitius",
+        "type": "HO"
+      },
+      {
+        "name": "mevech",
+        "type": "HO"
+      },
+      {
+        "name": "slamanders legion",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 3:01:30 a. m."
+  },
+  {
+    "map": "slakesands mesa",
+    "guilds": [
+      {
+        "name": "ministry of bandits",
+        "type": "HO"
+      },
+      {
+        "name": "tierra media",
+        "type": "HO"
+      },
+      {
+        "name": "swordx",
+        "type": "HO"
+      },
+      {
+        "name": "nagasaki",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 3:02:02 a. m."
+  },
+  {
+    "map": "skullmarsh upper",
+    "guilds": [
+      {
+        "name": "orden del nucleo",
+        "type": "HO"
+      },
+      {
+        "name": "no fight no profit",
+        "type": "HO"
+      },
+      {
+        "name": "jamaica",
+        "type": "HO"
+      },
+      {
+        "name": "monos con navaja",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 2:56:09 a. m."
+  },
+  {
+    "map": "skullmarsh lower",
+    "guilds": [
+      {
+        "name": "helheim",
+        "type": "HO"
+      },
+      {
+        "name": "twilight knights",
+        "type": "HO"
+      },
+      {
+        "name": "sodasopark",
+        "type": "HO"
+      },
+      {
+        "name": "zamurai",
+        "type": "HO"
+      },
+      {
+        "name": "real no fake",
+        "type": "HO"
+      },
+      {
+        "name": "nexxuzz",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "glacierbreak summit",
+    "guilds": [
+      {
+        "name": "ministry of bandits",
+        "type": "HO"
+      },
+      {
+        "name": "novus imperium",
+        "type": "HO"
+      },
+      {
+        "name": "homeless home",
+        "type": "HO"
+      },
+      {
+        "name": "a origem",
+        "type": "HO"
+      },
+      {
+        "name": "tuskateers",
+        "type": "HO"
+      },
+      {
+        "name": "impervium online",
+        "type": "HO"
+      },
+      {
+        "name": "manifiesto",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "whitecliff expanse",
+    "guilds": [
+      {
+        "name": "endline",
+        "type": "HO"
+      },
+      {
+        "name": "argentinidad",
+        "type": "HO"
+      },
+      {
+        "name": "mono con navaja",
+        "type": "HO"
+      },
+      {
+        "name": "los narcisistas",
+        "type": "HO"
+      },
+      {
+        "name": "dismount and death",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 3:06:34 a. m."
+  },
+  {
+    "map": "whitecliff peak",
+    "guilds": [
+      {
+        "name": "herois da treta",
+        "type": "HO"
+      },
+      {
+        "name": "the irish mafia",
+        "type": "HO"
+      },
+      {
+        "name": "extorted",
+        "type": "HO"
+      },
+      {
+        "name": "moonlit grove",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 3:07:42 a. m."
+  },
+  {
+    "map": "twinchannel narrows",
+    "guilds": [
+      {
+        "name": "mandatory",
+        "type": "HO"
+      },
+      {
+        "name": "blacklist bandits",
+        "type": "HO"
+      },
+      {
+        "name": "valhalla kingdom",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "frostpeak ascent",
+    "guilds": [
+      {
+        "name": "semper fidelis gk",
+        "type": "HO"
+      },
+      {
+        "name": "mix geban",
+        "type": "HO"
+      },
+      {
+        "name": "reimei no seidan",
+        "type": "HO"
+      },
+      {
+        "name": "the destruction company",
+        "type": "HO"
+      },
+      {
+        "name": "kingsmans",
+        "type": "HO"
+      },
+      {
+        "name": "the guardian lords",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "highstone plateau",
+    "guilds": [
+      {
+        "name": "it s show time",
+        "type": "HO"
+      },
+      {
+        "name": "primergolpe",
+        "type": "HO"
+      },
+      {
+        "name": "rex",
+        "type": "HO"
+      },
+      {
+        "name": "insolent",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "razorrock verge",
+    "guilds": [
+      {
+        "name": "evil kool aid",
+        "type": "HO"
+      },
+      {
+        "name": "maga",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "razorrock edge",
+    "guilds": [
+      {
+        "name": "desavence",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "razorrock gulch",
+    "guilds": [
+      {
+        "name": "pivas",
+        "type": "HO"
+      },
+      {
+        "name": "tlm",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": null
+  },
+  {
+    "map": "thunderrock ascent",
+    "guilds": [
+      {
+        "name": "reconnection",
+        "type": "HO"
+      },
+      {
+        "name": "pretores",
+        "type": "HO"
+      },
+      {
+        "name": "vatos locos",
+        "type": "HO"
+      }
+    ],
+    "lastEdited": "22-10-2025, 3:02:28 a. m."
+  }
+]
