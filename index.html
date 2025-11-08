@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>ATLAS - Albion Online (con Firestore)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;700&display=swap');
+
+    :root {
+      --gold-1:#d4af37; --gold-2:#c29b2d;
+      --bg-dark:#0f0f10; --bg-light:#f3efe1;
+      --panel-dark:rgba(0,0,0,0.72); --panel-light:rgba(255,255,245,0.92);
+      --accent-ho:#0b66ff; --accent-hq:#23a34a; --danger:#e53935;
+      --text-light:#f7f2ea; --text-dark:#111;
+      --muted: rgba(255,255,255,0.65);
+    }
+
+    /* Estilos generales y Cinzel para títulos/botones */
+    html,body{height:100%;margin:0;padding:0;font-family:"Inter",sans-serif; transition:background .25s,color .25s}
+    h1, h3, button, th { font-family: "Cinzel", serif; }
+
+    body{
+      background: linear-gradient(180deg,var(--bg-dark),#070707);
+      color:var(--text-light);
+      min-height:100vh;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+      box-sizing:border-box;
+    }
+    body.light{
+      background: var(--bg-light);
+      color:var(--text-dark);
+    }
+
+    .container{
+      width:100%;
+      max-width:980px;
+      background:var(--panel-dark);
+      border-radius:12px;
+      padding:22px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      backdrop-filter:blur(4px);
+      transition:background .25s, color .25s;
+    }
+    body.light .container{ background:var(--panel-light); box-shadow:0 8px 18px rgba(0,0,0,0.08); }
+
+    .header-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+    h1{ margin:0; font-size:clamp(20px, 4vw, 28px); letter-spacing:1px; background:linear-gradient(90deg,var(--gold-1),var(--gold-2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    
+    .status-alert { padding: 10px; border-radius: 8px; margin-bottom: 12px; font-weight: 700; display:flex; gap: 8px; align-items: center; }
+    .status-error { background-color: #fce4e4; color: #cc0000; }
+    .status-warning { background-color: #fff3cd; color: #856404; }
+    .status-success { background-color: #d4edda; color: #155724; }
+    
+    body:not(.light) .status-error { background-color: #2e0d0d; color: #ff9999; }
+    body:not(.light) .status-warning { background-color: #2e280d; color: #ffbb00; }
+    body:not(.light) .status-success { background-color: #0d2e1b; color: #66cc80; }
+
+    /* small switch (palanca) */
+    .theme-switch{ display:flex; align-items:center; gap:8px; font-size:13px; user-select:none; }
+    .switch{ width:46px; height:24px; background:rgba(255,255,255,0.12); border-radius:999px; position:relative; cursor:pointer; }
+    body.light .switch{ background:rgba(0,0,0,0.06); }
+    .knob{ position:absolute; top:2px; left:2px; width:20px; height:20px; border-radius:50%; background:linear-gradient(180deg,#fff,#ddd); box-shadow:0 2px 6px rgba(0,0,0,0.25); transition:left .18s; }
+    .switch.on .knob{ left:24px; }
+
+    .controls-row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+    .search-input{ flex:1 1 420px; }
+
+    input[type="text"], select {
+      width:100%; padding:10px 12px; border-radius:6px; border:1px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.02); color:inherit; box-sizing:border-box; font-size:14px;
+    }
+    body.light input[type="text"], body.light select { background: rgba(0,0,0,0.02); color:var(--text-dark); border-color: rgba(0,0,0,0.1); }
+
+    .btn{ padding:10px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:700; transition:transform 0.1s, box-shadow 0.1s; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+    .btn.small{ padding:7px 10px; font-size:13px; }
+    .btn.save{ background:linear-gradient(90deg,var(--gold-1),var(--gold-2)); color:#111; }
+    .btn.load{ background:#8b6f2a; color:white; }
+    .btn.add{ background:#2d6a2b; color:white; }
+    .btn.gray{ background:#6b6b6b; color:white; }
+    
+    .btn.icon-only { padding: 8px 10px; }
+
+    table{ width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+    th, td{ padding:12px 10px; border-bottom:1px solid rgba(255,255,255,0.04); text-align:left; vertical-align:top; }
+    body.light th, body.light td{ border-color: rgba(0,0,0,0.06); }
+    th{ color:var(--gold-1); font-weight:700; background: rgba(0,0,0,0.06); }
+    body.light th{ background: rgba(0,0,0,0.02); }
+
+    td.map-name{ font-weight:700; width:28%; text-transform: none; }
+    td.guilds{ width:50%; }
+
+    /* gremios: viñeta dorada y lista vertical */
+    .guild-row{ margin-bottom:8px; display:flex; align-items:center; gap:10px; }
+    .bullet{ width:10px; height:10px; border-radius:50%; background:var(--gold-1); flex:0 0 10px; margin-left:-2px; margin-top:3px; }
+    .guild-text{ display:flex; align-items:center; gap:8px; font-weight:600; text-transform:uppercase; font-size:13px; }
+    .tag{ padding:3px 8px; border-radius:999px; font-size:12px; font-weight:800; color:#fff; }
+    .tag.ho{ background:var(--accent-ho); } .tag.hq{ background:var(--accent-hq); }
+
+    .action-cell{ display:flex; flex-direction:column; gap:8px; align-items:flex-start; }
+    .action-cell button{ width:120px; padding:8px 10px; border-radius:8px; font-weight:700; cursor:pointer; }
+    .action-edit{ background: linear-gradient(90deg,#ff9800,#ffb366); border:none; color:#111; }
+    .action-del{ background: linear-gradient(90deg,#e53935,#b71c1c); border:none; color:#fff; }
+
+    .history{ font-size:12px; color:var(--muted); }
+    body.light .history{ color: rgba(0,0,0,0.6); }
+
+    /* Form area */
+    .form{ margin-top:16px; padding-top:12px; border-top:1px dashed rgba(255,255,255,0.04); }
+    body.light .form{ border-color: rgba(0,0,0,0.1); }
+    .form h3{ margin:0 0 8px 0; color:var(--gold-1); }
+    .form .top-row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
+    .form input[type="text"]{ flex:1 1 360px; padding:10px; }
+    .row-guild{ display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+    .row-guild input[type="text"]{ flex:1; padding:8px; }
+    .row-guild select{ width:140px; padding:8px; }
+    .remove-guild{ background:transparent; color:var(--danger); border:none; cursor:pointer; font-weight:700; padding:6px 8px; }
+
+    .add-guild-btn{ background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:6px; cursor:pointer; color:inherit; border:1px solid rgba(0,0,0,0.06); }
+    body.light .add-guild-btn{ background:rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.12); }
+    
+    .loading-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.8); color: white;
+        display: none; justify-content: center; align-items: center;
+        z-index: 1000; font-size: 24px;
+        backdrop-filter: blur(2px);
+    }
+    .loading-overlay.visible { display: flex; }
+
+
+    @media (max-width:760px){ 
+      .action-cell button{ width:100%; } 
+      .header-row{ flex-direction:column; align-items:flex-start; gap:10px; } 
+      .controls-row { flex-direction: column; align-items: stretch; }
+      .search-input { flex: 1 1 auto; width: 100%; }
+      td.map-name, td.guilds, td.action-cell { width: auto; display: block; padding-bottom: 0px; }
+      td.guilds { margin-top: 5px; margin-bottom: 5px; }
+      tr { display: block; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 15px; padding-bottom: 15px; }
+      thead { display: none; }
+      .action-cell { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="loadingOverlay" class="loading-overlay">Cargando datos...</div>
+  
+  <div class="container" role="application" aria-label="ATLAS - Albion Online con Firestore">
+    <div class="header-row">
+      <h1>ATLAS - Albion Online (CON FIRESTORE)</h1>
+
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div class="theme-switch" title="Alternar tema">
+          <div style="font-size:12px; font-weight:700; opacity:.9">Tema</div>
+          <div id="themeSwitch" class="switch" role="button" tabindex="0"><div class="knob"></div></div>
+        </div>
+
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button id="firebaseStatusBtn" class="btn small icon-only" title="Estado de conexión a Firebase">
+            <span id="statusIcon">...</span>
+          </button>
+          
+          <button id="exportBtn" class="btn save small" title="Exportar archivo JSON">📦 Exportar</button>
+          <button id="importBtn" class="btn load small" title="Importar archivo JSON">📂 Importar</button>
+          <input id="fileInput" type="file" accept=".json,application/json" style="display:none">
+        </div>
+      </div>
+    </div>
+    
+    <div id="statusAlert" class="status-alert status-warning">
+      <span style="font-size:18px;">⚠️</span>
+      <span id="statusMessage">Iniciando conexión a Firebase...</span>
+    </div>
+
+    <div class="controls-row">
+      <input id="searchInput" class="search-input" type="text" placeholder="Buscar mapa o gremio...">
+    </div>
+
+    <table aria-live="polite" id="mainTable">
+      <thead><tr><th>Mapa</th><th>Gremios</th><th>Acción</th></tr></thead>
+      <tbody id="resultTableBody"></tbody>
+    </table>
+
+    <div class="form" id="editor">
+      <h3>Agregar / Editar</h3>
+
+      <div class="top-row">
+        <input id="mapInput" type="text" placeholder="Nombre del mapa (ej. Sunfang Cliffs)">
+        <button id="addGuildRow" class="btn small">+ Agregar gremio</button>
+      </div>
+
+      <div id="guildListContainer" aria-label="Lista de gremios para el formulario" style="margin-bottom:6px"></div>
+
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button id="applyBtn" class="btn add">Guardar en Firestore</button>
+        <button id="clearForm" class="btn small gray">Limpiar Formulario</button>
+      </div>
+      <p style="margin-top: 10px; font-size: 12px; color: var(--muted);" id="userDisplay">
+        ID de Usuario: Cargando...
+      </p>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { 
+      getFirestore, collection, doc, setDoc, deleteDoc, onSnapshot, query, updateDoc 
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // --- Variables de Entorno y Configuración ---
+    const appId = 'atlas-albion-3f535'; 
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDnse13o_HvsBx08c3BAc_WkkeYATsEzQk", // La clave segura
+      authDomain: "atlas-albion-3f535.firebaseapp.com",
+      projectId: "atlas-albion-3f535",
+      storageBucket: "atlas-albion-3f535.firebasestorage.app",
+      messagingSenderId: "734860667304",
+      appId: "1:734860667304:web:211782caf5da8ccb61959d"
+    };
+
+    // --- Estado y Referencias de Firebase ---
+    let app, db, auth;
+    let userId = null;
+    let isAuthReady = false;
+    
+    // --- Estado de la App ---
+    let data = [];
+    let editingMap = null; 
+    let editingDocId = null; 
+    
+    // --- Referencias DOM (abreviadas) ---
+    const resultTableBody = document.getElementById('resultTableBody');
+    const searchInput = document.getElementById('searchInput');
+    const exportBtn = document.getElementById('exportBtn');
+    const importBtn = document.getElementById('importBtn');
+    const fileInput = document.getElementById('fileInput');
+    const themeSwitch = document.getElementById('themeSwitch');
+    const bodyEl = document.body;
+    const mapInput = document.getElementById('mapInput');
+    const guildListContainer = document.getElementById('guildListContainer');
+    const addGuildRowBtn = document.getElementById('addGuildRow');
+    const applyBtn = document.getElementById('applyBtn');
+    const clearFormBtn = document.getElementById('clearForm');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const statusAlert = document.getElementById('statusAlert');
+    const statusMessage = document.getElementById('statusMessage');
+    const statusIcon = document.getElementById('statusIcon');
+    const userDisplay = document.getElementById('userDisplay');
+    
+    // --- Rutas de Firestore ---
+    const FIREBASE_COLLECTION_PATH = `artifacts/${appId}/public/data/maps`; // RUTA COMPLETA
+
+    // --- Funciones de UI y Mensajes ---
+    function showStatus(type, message) {
+      statusAlert.className = `status-alert ${type}`;
+      statusMessage.textContent = message;
+      statusIcon.innerHTML = type === 'status-success' ? '✅' : (type === 'status-warning' ? '⚠️' : '❌');
+    }
+    
+    function showLoading(visible) {
+      loadingOverlay.classList.toggle('visible', visible);
+    }
+
+    // --- Helpers para Filas de Gremio en Form ---
+    function createGuildFormRow(name = '', type = 'HO') {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'row-guild';
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = 'Nombre del gremio';
+      input.value = name;
+
+      const select = document.createElement('select');
+      const o1 = new Option('HO (Hideout)', 'HO');
+      const o2 = new Option('HQ (Headquarters)', 'HQ');
+      select.add(o1); select.add(o2);
+      select.value = type;
+
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.className = 'remove-guild';
+      removeBtn.title = 'Eliminar este gremio';
+      removeBtn.textContent = 'X';
+      removeBtn.onclick = () => wrapper.remove();
+
+      wrapper.appendChild(input);
+      wrapper.appendChild(select);
+      wrapper.appendChild(removeBtn);
+      return wrapper;
+    }
+
+    function clearGuildForm() {
+      guildListContainer.innerHTML = '';
+      guildListContainer.appendChild(createGuildFormRow('', 'HO'));
+      mapInput.value = '';
+      editingMap = null;
+      editingDocId = null;
+      applyBtn.textContent = 'Guardar en Firestore';
+    }
+
+    addGuildRowBtn.addEventListener('click', (e) => { e.preventDefault(); guildListContainer.appendChild(createGuildFormRow('', 'HO')); });
+    clearFormBtn.addEventListener('click', clearGuildForm);
+
+    // --- Renderizar Tabla ---
+    function renderResults(filter = '') {
+      const q = (filter || '').trim().toLowerCase();
+      resultTableBody.innerHTML = '';
+      if (!Array.isArray(data) || data.length === 0) {
+        resultTableBody.innerHTML = '<tr><td colspan="3">⚔️ No hay mapas cargados. Agrega uno.</td></tr>';
+        return;
+      }
+
+      const filtered = data.filter(item => {
+        if (!q) return true;
+        if ((item.map || '').toLowerCase().includes(q)) return true;
+        if (item.guilds.some(g => (g.name || '').toLowerCase().includes(q))) return true;
+        return false;
+      }).sort((a, b) => a.map.localeCompare(b.map)); // Ordenar alfabéticamente
+
+      if (filtered.length === 0) {
+        resultTableBody.innerHTML = '<tr><td colspan="3">⚔️ No se encontraron resultados</td></tr>';
+        return;
+      }
+
+      filtered.forEach(item => {
+        const tr = document.createElement('tr');
+
+        const tdMap = document.createElement('td');
+        tdMap.className = 'map-name';
+        tdMap.textContent = item.map;
+
+        const tdGuilds = document.createElement('td');
+        tdGuilds.className = 'guilds';
+        item.guilds.forEach(g => {
+          const gdiv = document.createElement('div');
+          gdiv.className = 'guild-row';
+          const bullet = document.createElement('div'); bullet.className = 'bullet';
+          const txt = document.createElement('div'); txt.className = 'guild-text';
+          const nameSpan = document.createElement('span'); nameSpan.style.textTransform = 'none';
+          nameSpan.textContent = g.name;
+          const tag = document.createElement('span'); tag.className = 'tag ' + (g.type === 'HQ' ? 'hq' : 'ho'); tag.textContent = g.type;
+          txt.appendChild(nameSpan);
+          txt.appendChild(tag);
+          gdiv.appendChild(bullet);
+          gdiv.appendChild(txt);
+          tdGuilds.appendChild(gdiv);
+        });
+
+        const tdAction = document.createElement('td');
+        tdAction.className = 'action-cell';
+        const editBtn = document.createElement('button');
+        editBtn.className = 'action-edit'; editBtn.textContent = 'Editar';
+        editBtn.onclick = () => startEditing(item);
+
+        const delBtn = document.createElement('button');
+        delBtn.className = 'action-del'; delBtn.textContent = 'Eliminar';
+        delBtn.onclick = () => deleteMap(item.docId, item.map);
+
+        const hist = document.createElement('div'); hist.className = 'history'; hist.textContent = item.lastEdited ? `Última edición: ${item.lastEdited}` : 'Nunca editado';
+
+        tdAction.appendChild(editBtn);
+        tdAction.appendChild(delBtn);
+        tdAction.appendChild(hist);
+
+        tr.appendChild(tdMap);
+        tr.appendChild(tdGuilds);
+        tr.appendChild(tdAction);
+
+        resultTableBody.appendChild(tr);
+      });
+      showLoading(false);
+    }
+
+    // --- Iniciar Edición ---
+    function startEditing(item) {
+      editingMap = item.map;
+      editingDocId = item.docId;
+      mapInput.value = item.map;
+      applyBtn.textContent = 'Guardar Cambios';
+      
+      guildListContainer.innerHTML = '';
+      if (Array.isArray(item.guilds) && item.guilds.length) {
+        item.guilds.forEach(g => guildListContainer.appendChild(createGuildFormRow(g.name, g.type)));
+      } else {
+        guildListContainer.appendChild(createGuildFormRow('', 'HO'));
+      }
+      window.scrollTo({ top: document.getElementById('editor').offsetTop - 20, behavior: 'smooth' });
+    }
+
+    // --- Funciones de Persistencia (Firestore) ---
+
+    // 1. Inicialización de Firebase
+    function initFirebase() {
+      try {
+        if (!firebaseConfig.projectId) {
+           throw new Error("La configuración de Firebase está vacía.");
+        }
+        app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        auth = getAuth(app);
+
+        // Iniciar autenticación anónima
+        onAuthStateChanged(auth, async (user) => {
+          if (!user) {
+            try {
+              await signInAnonymously(auth);
+            } catch (error) {
+              console.error("Error en la autenticación anónima:", error);
+              showStatus('status-error', `❌ Error de autenticación: ${error.message}.`);
+            }
+          }
+          // El estado de autenticación ha cambiado (ya sea login o anonimo)
+          userId = auth.currentUser ? auth.currentUser.uid : 'anon_user';
+          isAuthReady = true;
+          userDisplay.textContent = `ID de Usuario: ${userId}`;
+          showStatus('status-success', `✅ Conectado. ID de Sesión: ${userId.substring(0, 8)}...`);
+          
+          // Iniciar la escucha de Firestore solo después de la autenticación
+          startDataListener();
+        });
+
+      } catch (error) {
+        console.error("Error inicializando Firebase:", error);
+        showStatus('status-error', `❌ ERROR: Conexión fallida. Revisa la configuración en el código y tu conexión. Detalle: ${error.message}`);
+      }
+    }
+    
+    // 2. Oyente de Datos en Tiempo Real
+    function startDataListener() {
+      if (!db || !isAuthReady) return; 
+
+      const mapsCollection = collection(db, FIREBASE_COLLECTION_PATH);
+      const q = query(mapsCollection); 
+
+      onSnapshot(q, (snapshot) => {
+        data = [];
+        snapshot.forEach((doc) => {
+          const item = doc.data();
+          // Mapear los datos de Firestore a la estructura de la app
+          data.push({ 
+            docId: doc.id,
+            map: item.map,
+            guilds: item.guilds || [], 
+            lastEdited: item.lastEdited || 'N/A'
+          });
+        });
+        renderResults(searchInput.value);
+      }, (error) => {
+        console.error("Error al escuchar Firestore:", error);
+        showStatus('status-error', `❌ ERROR de Sincronización. Revisa las reglas de seguridad. Detalle: ${error.message}`);
+        showLoading(false);
+      });
+    }
+
+    // 3. Guardar/Actualizar en Firestore
+    applyBtn.addEventListener('click', async () => {
+      if (!isAuthReady || !db) {
+        showStatus('status-warning', '⚠️ Esperando la conexión a Firebase...');
+        return;
+      }
+      
+      const mapName = mapInput.value.trim();
+      if (!mapName) {
+        Swal.fire('Falta nombre', 'Escribe el nombre del mapa', 'warning');
+        return;
+      }
+
+      const rows = Array.from(guildListContainer.children).map(row => {
+        const name = (row.querySelector('input[type="text"]').value || '').trim();
+        const type = (row.querySelector('select').value || 'HO');
+        return { name, type };
+      }).filter(g => g.name);
+
+      if (rows.length === 0) {
+        Swal.fire('Falta gremio', 'Agrega al menos un gremio con tipo HO/HQ', 'warning');
+        return;
+      }
+
+      showLoading(true);
+      const now = new Date().toLocaleString();
+      
+      const mapDocRef = editingDocId 
+          ? doc(db, FIREBASE_COLLECTION_PATH, editingDocId) 
+          : doc(collection(db, FIREBASE_COLLECTION_PATH)); 
+      
+      const saveData = {
+        map: mapName,
+        guilds: rows,
+        lastEdited: now,
+        editedBy: userId 
+      };
+
+      try {
+        if (editingDocId) {
+          // Actualizar documento
+          await updateDoc(mapDocRef, saveData);
+          Swal.fire('Actualizado', 'Mapa actualizado y sincronizado.', 'success');
+        } else {
+          // Agregar nuevo documento
+          await setDoc(mapDocRef, saveData);
+          Swal.fire('Agregado', 'Mapa agregado y sincronizado.', 'success');
+        }
+        clearGuildForm();
+      } catch (error) {
+        console.error("Error al guardar en Firestore:", error);
+        Swal.fire({
+          title: 'ERROR DE GUARDADO',
+          icon: 'error',
+          html: 'No se pudo guardar. Revisa las reglas de seguridad de Firestore (debes permitir `write` a usuarios autenticados).',
+          confirmButtonText: 'OK'
+        });
+      } finally {
+        showLoading(false);
+      }
+    });
+
+    // 4. Eliminar en Firestore
+    async function deleteMap(docId, mapName) {
+      if (!isAuthReady || !db) {
+        showStatus('status-warning', '⚠️ Esperando la conexión a Firebase...');
+        return;
+      }
+      
+      const res = await Swal.fire({
+        title: '¿Eliminar mapa?',
+        text: `¿Seguro que quieres eliminar "${mapName}" de Firestore?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#e53935',
+        confirmButtonText: 'Sí, eliminar'
+      });
+      
+      if (!res.isConfirmed) return;
+
+      showLoading(true);
+      try {
+        const mapDocRef = doc(db, FIREBASE_COLLECTION_PATH, docId);
+        await deleteDoc(mapDocRef);
+        Swal.fire('Eliminado', 'Mapa eliminado y sincronizado.', 'success');
+      } catch (error) {
+        console.error("Error al eliminar en Firestore:", error);
+        Swal.fire({
+          title: 'ERROR AL ELIMINAR',
+          icon: 'error',
+          html: 'No se pudo eliminar. Revisa las reglas de seguridad de Firestore.',
+          confirmButtonText: 'OK'
+        });
+      } finally {
+        showLoading(false);
+      }
+    }
+
+
+    // --- Importar / Exportar (Local) ---
+    
+    // Exportar (funciona con los datos sincronizados de 'data')
+    exportBtn.addEventListener('click', () => {
+      try {
+        const dataToExport = data.map(({ docId, ...rest }) => rest);
+        const blob = new Blob([JSON.stringify(dataToExport, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `atlas_albion_${new Date().toISOString().split('T')[0]}.json`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        Swal.fire('✅ Archivo guardado', 'Descarga iniciada', 'success');
+      } catch (err) {
+        console.error(err);
+        Swal.fire('Error', 'No se pudo generar el archivo', 'error');
+      }
+    });
+
+    // Importar (guarda en Firestore uno por uno)
+    importBtn.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', (e) => {
+      const f = e.target.files[0];
+      if (!f) return;
+      
+      const reader = new FileReader();
+      reader.onload = async (ev) => {
+        let parsed = null;
+        try {
+          let text = ev.target.result;
+          if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+          text = text.trim();
+          parsed = JSON.parse(text);
+          if (!Array.isArray(parsed)) throw new Error('Se esperaba un array');
+
+          const confirm = await Swal.fire({
+            title: 'Confirmar Importación',
+            html: `Se encontraron ${parsed.length} mapas. ¿Deseas importarlos a Firestore? <br> *Se crearán nuevos documentos.`,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, importar',
+            cancelButtonText: 'Cancelar'
+          });
+
+          if (confirm.isConfirmed) {
+            await processImport(parsed);
+          }
+        } catch (err) {
+          console.error('Error parseando JSON:', err);
+          Swal.fire('❌ Error', 'No se pudo leer el archivo JSON o el formato es incorrecto', 'error');
+        } finally {
+          fileInput.value = '';
+        }
+      };
+      reader.readAsText(f, 'UTF-8');
+    });
+    
+    async function processImport(items) {
+        if (!isAuthReady || !db) {
+            Swal.fire('⚠️ Espera', 'La conexión a Firebase no está lista. Inténtalo de nuevo.', 'warning');
+            return;
+        }
+
+        showLoading(true);
+        const mapsCollection = collection(db, FIREBASE_COLLECTION_PATH);
+        let successCount = 0;
+        const now = new Date().toLocaleString();
+        
+        for (const item of items) {
+            try {
+                const newDocRef = doc(mapsCollection); 
+                
+                const dataToSave = {
+                    map: item.map || item.name || 'Mapa sin Nombre',
+                    guilds: item.guilds || [],
+                    lastEdited: now,
+                    importedBy: userId
+                };
+                
+                if (dataToSave.guilds.length && typeof dataToSave.guilds[0] === 'string') {
+                    dataToSave.guilds = dataToSave.guilds.map(g => ({ name: g, type: 'HO' }));
+                }
+
+                await setDoc(newDocRef, dataToSave);
+                successCount++;
+            } catch (error) {
+                console.error(`Fallo al importar item: ${item.map}`, error);
+            }
+        }
+
+        showLoading(false);
+        Swal.fire('Importación Completa', `Se importaron ${successCount} de ${items.length} mapas.`, 'success');
+    }
+
+    // --- Búsqueda ---
+    searchInput.addEventListener('input', (e) => renderResults(e.target.value));
+
+    // --- Tema (Palanca) ---
+    function applyTheme(theme) {
+      const light = theme === 'light';
+      bodyEl.classList.toggle('light', light);
+      themeSwitch.classList.toggle('on', light);
+      localStorage.setItem('theme', theme);
+    }
+    themeSwitch.addEventListener('click', () => {
+      const newT = bodyEl.classList.contains('light') ? 'dark' : 'light';
+      applyTheme(newT);
+    });
+    themeSwitch.addEventListener('keydown', (e) => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); themeSwitch.click(); }});
+    applyTheme(localStorage.getItem('theme') || 'dark');
+
+
+    // --- Inicialización ---
+    initFirebase();
+    clearGuildForm();
+
+  </script>
+</body>
+</html>
